@@ -1,0 +1,359 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+html,body{margin:0;background:#000;overflow:hidden}
+canvas{display:block;width:540px;height:960px}
+</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Minimal line-art explainer engine. Everything is a pure function of time: draw(t).
+const W = 540, H = 960;
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const prog = (t, a, d) => clamp((t - a) / d);
+const eo = x => 1 - Math.pow(1 - x, 3);
+const eio = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const lerp = (a, b, k) => a + (b - a) * k;
+const COIN_FONT = '"DejaVu Sans", sans-serif';
+
+let GA = 1; // global alpha for scene fade
+
+function setStroke(a = 1, w = 2.5) {
+  ctx.strokeStyle = `rgba(255,255,255,${a * GA})`;
+  ctx.lineWidth = w;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.shadowColor = `rgba(255,255,255,${0.55 * a * GA})`;
+  ctx.shadowBlur = 10;
+}
+// stroke a path with a draw-on progress p
+function S(fn, len, p = 1, a = 1, w = 2.5) {
+  if (p <= 0) return;
+  ctx.save();
+  setStroke(a, w);
+  ctx.beginPath(); fn();
+  if (p < 1) { ctx.setLineDash([len, len + 2]); ctx.lineDashOffset = len * (1 - p); }
+  ctx.stroke();
+  ctx.restore();
+}
+function T(str, x, y, size, o = {}) {
+  const { weight = 700, a = 1, font = 'Inter, sans-serif', align = 'center', spacing = 0 } = o;
+  ctx.save();
+  ctx.font = `${weight} ${size}px ${font}`;
+  ctx.textAlign = align; ctx.textBaseline = 'middle';
+  if ('letterSpacing' in ctx) ctx.letterSpacing = spacing + 'px';
+  ctx.fillStyle = `rgba(255,255,255,${a * GA})`;
+  ctx.shadowColor = `rgba(255,255,255,${0.35 * a * GA})`; ctx.shadowBlur = 8;
+  ctx.fillText(str, x, y);
+  ctx.restore();
+}
+function withT(x, y, s, rot, fn) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot || 0); ctx.scale(s, s); fn(); ctx.restore(); }
+
+// ---------- icons (centered on 0,0, ~ 200 units wide) ----------
+function coin(x, y, r, a = 1, p = 1) {
+  if (a <= 0 || p <= 0) return;
+  S(() => ctx.arc(x, y, r, 0, Math.PI * 2), r * 6.4, p, a, 2.2);
+  S(() => ctx.arc(x, y, r * .78, 0, Math.PI * 2), r * 5, p, a * .35, 1.2);
+  if (p > .6) T('₿', x, y + r * .04, r * 1.05, { weight: 700, a: a * clamp((p - .6) / .4), font: COIN_FONT });
+}
+function building(p = 1, a = 1) {
+  S(() => { ctx.moveTo(-95, -38); ctx.lineTo(0, -100); ctx.lineTo(95, -38); ctx.closePath(); }, 420, prog(p, 0, .5), a);
+  [-60, -20, 20, 60].forEach((x, i) => S(() => { ctx.moveTo(x, -26); ctx.lineTo(x, 48); }, 80, prog(p, .2 + i * .08, .4), a));
+  S(() => { ctx.moveTo(-100, 52); ctx.lineTo(100, 52); }, 210, prog(p, .45, .4), a);
+  S(() => { ctx.moveTo(-108, 66); ctx.lineTo(108, 66); }, 230, prog(p, .55, .4), a);
+}
+function key(p = 1, a = 1) {
+  S(() => ctx.arc(-52, 0, 30, 0, Math.PI * 2), 200, prog(p, 0, .5), a);
+  S(() => ctx.arc(-52, 0, 9, 0, Math.PI * 2), 60, prog(p, .15, .4), a * .6, 1.6);
+  S(() => { ctx.moveTo(-22, 0); ctx.lineTo(96, 0); }, 120, prog(p, .3, .5), a);
+  S(() => { ctx.moveTo(58, 0); ctx.lineTo(58, 26); }, 30, prog(p, .6, .3), a);
+  S(() => { ctx.moveTo(80, 0); ctx.lineTo(80, 18); }, 20, prog(p, .7, .3), a);
+}
+function lock(p = 1, a = 1) {
+  S(() => ctx.roundRect(-22, -2, 44, 38, 6), 180, prog(p, 0, .6), a);
+  S(() => { ctx.arc(0, -2, 15, Math.PI, 0); }, 50, prog(p, .3, .5), a);
+  S(() => ctx.arc(0, 15, 4, 0, Math.PI * 2), 26, prog(p, .6, .3), a * .8, 1.8);
+}
+function phone(p = 1, a = 1) {
+  S(() => ctx.roundRect(-58, -98, 116, 196, 16), 640, prog(p, 0, .7), a);
+  S(() => { ctx.moveTo(-14, -80); ctx.lineTo(14, -80); }, 30, prog(p, .5, .3), a * .6, 2);
+  withT(0, 6, 1.15, 0, () => lock(prog(p, .5, .5), a));
+}
+function warning(p = 1, a = 1) {
+  S(() => { ctx.moveTo(0, -60); ctx.lineTo(56, 40); ctx.lineTo(-56, 40); ctx.closePath(); }, 330, p, a);
+  if (p > .6) T('!', 0, 8, 54, { a: a * clamp((p - .6) / .4) });
+}
+function questionMark(p = 1, a = 1) {
+  if (p <= 0) return;
+  T('?', 0, 4, 110, { a: a * p });
+}
+function scales(angle, p = 1, a = 1) {
+  S(() => { ctx.moveTo(0, -80); ctx.lineTo(0, 86); }, 170, prog(p, 0, .4), a);
+  S(() => { ctx.moveTo(-52, 86); ctx.lineTo(52, 86); }, 110, prog(p, .2, .4), a);
+  S(() => ctx.arc(0, -80, 6, 0, Math.PI * 2), 40, prog(p, .3, .3), a);
+  if (p < .5) return;
+  ctx.save(); ctx.translate(0, -80); ctx.rotate(angle);
+  S(() => { ctx.moveTo(-120, 0); ctx.lineTo(120, 0); }, 240, 1, a);
+  [-120, 120].forEach(x => {
+    S(() => { ctx.moveTo(x, 0); ctx.lineTo(x - 34, 78); ctx.moveTo(x, 0); ctx.lineTo(x + 34, 78); }, 190, 1, a * .7, 1.6);
+    S(() => { ctx.moveTo(x - 44, 78); ctx.arc(x, 78, 44, Math.PI, 0, true); ctx.closePath(); }, 220, 1, a);
+  });
+  ctx.restore();
+}
+
+// ---------- scenes ----------
+function head(s, lt, d) {
+  const k = eo(prog(lt, .1, .6));
+  let lines = [s.head];
+  if (s.head.length > 22) { // wrap long headlines at the comma or the middle space
+    const i = s.head.indexOf(',') > 0 ? s.head.indexOf(',') + 1 : s.head.indexOf(' ', Math.floor(s.head.length / 2));
+    lines = [s.head.slice(0, i).trim(), s.head.slice(i).trim()];
+  }
+  lines.forEach((l, n) => T(l, W / 2, 175 + n * 44 + (1 - k) * 18, 36, { a: k, spacing: 1.5, weight: 800 }));
+  const ly = 175 + (lines.length - 1) * 44 + 42;
+  S(() => { ctx.moveTo(W / 2 - 70, ly); ctx.lineTo(W / 2 + 70, ly); }, 140, eo(prog(lt, .35, .6)), .55, 1.5);
+}
+function caption(s, lt, d) {
+  const k = prog(lt, .5, .6);
+  const words = s.narration.split(' ');
+  const lines = []; let cur = '';
+  words.forEach(w => { if ((cur + ' ' + w).trim().length > 30) { lines.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); });
+  if (cur) lines.push(cur);
+  lines.forEach((l, i) => T(l, W / 2, 820 + i * 28 - (lines.length - 1) * 14, 19, { weight: 500, a: .78 * k }));
+}
+
+const SC = {
+  question(lt) {
+    const k = eo(prog(lt, .2, .7));
+    const pulse = 1 + .03 * Math.sin(lt * 3);
+    coin(W / 2 - 52, 470, 78 * pulse, k, prog(lt, .2, .8));
+    withT(W / 2 + 92, 440, 1, 0, () => questionMark(eo(prog(lt, 1.2, .6)), 1));
+  },
+  exchange(lt) {
+    withT(W / 2, 470, 1.5, 0, () => building(prog(lt, .2, 1.2), 1));
+    for (let i = 0; i < 6; i++) {
+      const tt = (lt - 1.2 - i * .55) / 1.3;
+      if (tt <= 0 || tt >= 1) continue;
+      const e = eio(tt);
+      coin(lerp(30, W / 2, e), lerp(640 - i * 18, 500, e), 15, 1 - prog(tt, .75, .25), 1);
+    }
+    T('EXCHANGE', W / 2, 610, 15, { weight: 600, a: .6 * prog(lt, 1, .6), spacing: 4 });
+    T('easy.  familiar.  centralized.', W / 2, 650, 17, { weight: 500, a: .6 * prog(lt, 3, .8) });
+  },
+  key(lt) {
+    const r = -.5 * (1 - eo(prog(lt, 0, 2)));
+    withT(W / 2, 470, 1.55, r, () => key(prog(lt, .2, 1.1), 1));
+    for (let i = 0; i < 7; i++) {
+      const ang = lt * .8 + i * Math.PI * 2 / 7;
+      coin(W / 2 + Math.cos(ang) * 190, 470 + Math.sin(ang) * 120, 16, .9 * prog(lt, 1.2 + i * .1, .5), 1);
+    }
+    T('whoever holds the keys...', W / 2, 640, 17, { weight: 500, a: .65 * prog(lt, 2.4, .6) });
+    T('...holds the coins', W / 2, 668, 17, { weight: 500, a: .65 * prog(lt, 3.6, .6) });
+  },
+  risk(lt) {
+    withT(W / 2, 480, 1.45, 0, () => building(1, .9));
+    S(() => { ctx.moveTo(246, 420); ctx.lineTo(262, 452); ctx.lineTo(244, 478); ctx.lineTo(266, 512); ctx.lineTo(250, 540); }, 190, eo(prog(lt, 1.4, .9)), 1, 2.4);
+    const wp = eo(prog(lt, .6, .6));
+    withT(W / 2 + 112, 372, .9 * (1 + .06 * Math.sin(lt * 6)), 0, () => warning(wp, 1));
+    for (let i = 0; i < 6; i++) {
+      const tt = ((lt - 2.2 - i * .5) % 2.4) / 1.6;
+      if (lt < 2.2 + i * .5 || tt < 0 || tt > 1) continue;
+      coin(W / 2 - 70 + (i % 3) * 70, lerp(560, 760, tt), 12, 1 - tt, 1);
+    }
+    T('hacks  ·  freezes  ·  collapses', W / 2, 700, 16, { weight: 500, a: .6 * prog(lt, 3, .6) });
+  },
+  wallet(lt) {
+    const g = 1 + .02 * Math.sin(lt * 3);
+    withT(W / 2, 470, 1.7 * g, 0, () => phone(prog(lt, .2, 1.2), 1));
+    for (let i = 0; i < 4; i++) {
+      const tt = (lt - 1.6 - i * .6) / 1.2;
+      if (tt <= 0 || tt >= 1) continue;
+      const e = eio(tt);
+      coin(lerp(520, W / 2, e), lerp(300 + i * 90, 470, e), 14, 1 - prog(tt, .7, .3), 1);
+    }
+    T('YOU hold the keys', W / 2, 660, 17, { weight: 500, a: .65 * prog(lt, 2.6, .6) });
+  },
+  scales(lt) {
+    const ang = .22 * Math.exp(-lt * .7) * Math.cos(lt * 2.4 + .2) - .03;
+    withT(W / 2, 480, 1.0, 0, () => scales(ang, prog(lt, .1, 1), 1));
+    T('CONTROL', W / 2 - 130, 690, 16, { weight: 700, spacing: 3, a: prog(lt, 1.2, .6) });
+    T('CONVENIENCE', W / 2 + 130, 690, 16, { weight: 700, spacing: 3, a: prog(lt, 1.6, .6) });
+    T('your keys = your responsibility', W / 2, 735, 17, { weight: 500, a: .65 * prog(lt, 3.6, .6) });
+  },
+  compare(lt) {
+    S(() => { ctx.moveTo(W / 2, 330); ctx.lineTo(W / 2, 640); }, 310, eo(prog(lt, .1, .7)), .35, 1.5);
+    withT(W / 4 + 5, 470, .95, 0, () => building(prog(lt, .3, 1), 1));
+    withT(W * 3 / 4 - 5, 470, 1.05, 0, () => phone(prog(lt, .6, 1), 1));
+    T('TRADING', W / 4 + 5, 610, 16, { weight: 700, spacing: 3, a: prog(lt, 1.2, .5) });
+    T('HOLDING', W * 3 / 4 - 5, 610, 16, { weight: 700, spacing: 3, a: prog(lt, 1.5, .5) });
+    T('exchange', W / 4 + 5, 640, 15, { weight: 500, a: .6 * prog(lt, 2.2, .5) });
+    T('own wallet', W * 3 / 4 - 5, 640, 15, { weight: 500, a: .6 * prog(lt, 2.8, .5) });
+  },
+  outro(lt, d, s) {
+    const k = eo(prog(lt, .2, .8));
+    coin(W / 2, 470, 70 * (1 + .03 * Math.sin(lt * 3)), k, prog(lt, .2, .8));
+    T('FOLLOW', W / 2, 610, 22, { weight: 800, spacing: 6, a: prog(lt, 1.2, .6) });
+    T(s.foot || 'Not financial advice.', W / 2, 740, 15, { weight: 500, a: .5 * prog(lt, 2, .6) });
+  },
+
+  // ---- Binance news scenes ----
+  hack(lt) {
+    withT(W / 2 - 20, 360, 1.15, 0, () => building(prog(lt, .1, 1), .95));
+    withT(W / 2 + 135, 285, .8 * (1 + .07 * Math.sin(lt * 7)), 0, () => warning(eo(prog(lt, .8, .5)), 1));
+    const e = eo(prog(lt, 1.0, 3.2));
+    T('$' + (6.3 * e).toFixed(1) + ' BILLION', W / 2, 560, 52, { weight: 800, a: prog(lt, 1, .4), spacing: 1 });
+    T('estimated by Binance', W / 2, 604, 15, { weight: 500, a: .55 * prog(lt, 3.5, .6) });
+  },
+  record(lt) {
+    const base = 700, hMax = 330, bw = 100;
+    const h1 = hMax * (1.5 / 6.3) * eo(prog(lt, .5, 1)), h2 = hMax * eo(prog(lt, 2, 1.6));
+    S(() => { ctx.moveTo(60, base); ctx.lineTo(480, base); }, 420, eo(prog(lt, 0, .6)), .6, 1.8);
+    ctx.save(); ctx.fillStyle = `rgba(255,255,255,${.06 * GA})`; ctx.fillRect(160, base - h1, bw, h1); ctx.fillRect(310, base - h2, bw, h2); ctx.restore();
+    S(() => ctx.rect(160, base - h1, bw, h1), 2 * (bw + h1), prog(lt, .5, 1), 1);
+    S(() => ctx.rect(310, base - h2, bw, h2), 2 * (bw + h2), prog(lt, 2, 1.6), 1);
+    T('~$1.5B', 210, base - h1 - 22, 20, { a: prog(lt, 1.3, .5) });
+    T('$6.3B', 360, base - h2 - 24, 28, { weight: 800, a: prog(lt, 3.2, .5) });
+    T('BYBIT 2025', 210, base + 28, 13, { weight: 600, spacing: 2, a: .65 * prog(lt, 1.3, .5) });
+    T('BINANCE', 360, base + 28, 13, { weight: 600, spacing: 2, a: .65 * prog(lt, 3.2, .5) });
+  },
+  laptop(lt) {
+    const lx = 135, sx = 405, y = 470;
+    withT(lx, y, 1, 0, () => {
+      S(() => ctx.roundRect(-70, -52, 140, 92, 8), 420, prog(lt, .1, .8), 1);
+      S(() => { ctx.moveTo(-90, 56); ctx.lineTo(90, 56); ctx.lineTo(80, 42); ctx.lineTo(-80, 42); ctx.closePath(); }, 420, prog(lt, .5, .7), 1);
+      if (lt > 1.2) T('!', 0, -6, 46, { a: clamp((lt - 1.2) / .4) * (.6 + .4 * Math.sin(lt * 6) ** 2) });
+    });
+    T('ENGINEER LAPTOP', lx, y + 100, 12, { weight: 600, spacing: 2, a: .65 * prog(lt, 1.4, .5) });
+    withT(sx, y, 1, 0, () => {
+      [-60, -6, 48].forEach((yy, i) => {
+        S(() => ctx.roundRect(-55, yy - 22, 110, 44, 8), 320, prog(lt, 1.6 + i * .25, .6), 1);
+        S(() => ctx.arc(-34, yy, 4, 0, Math.PI * 2), 26, prog(lt, 2 + i * .25, .3), .9, 2);
+      });
+    });
+    T('SERVER', sx, y + 100, 12, { weight: 600, spacing: 2, a: .65 * prog(lt, 2.4, .5) });
+    S(() => { ctx.moveTo(lx + 85, y); ctx.lineTo(sx - 70, y); }, 200, eo(prog(lt, 2.2, .8)), .8, 2);
+    for (let i = 0; i < 5; i++) {
+      const tt = ((lt - 3.4 - i * .45) % 2.2) / 1.5;
+      if (lt < 3.4 + i * .45 || tt < 0 || tt > 1) continue;
+      coin(sx + 20 + i * 14 - 28, lerp(y + 125, y + 260, tt), 12, 1 - tt, 1);
+    }
+  },
+  paused(lt) {
+    const g = 1 + .02 * Math.sin(lt * 3);
+    withT(W / 2, 470, 1.2 * g, 0, () => {
+      S(() => ctx.arc(0, 0, 100, 0, Math.PI * 2), 630, prog(lt, .1, .9), 1);
+      S(() => { ctx.moveTo(-26, -42); ctx.lineTo(-26, 42); }, 90, prog(lt, .8, .4), 1, 6);
+      S(() => { ctx.moveTo(26, -42); ctx.lineTo(26, 42); }, 90, prog(lt, 1, .4), 1, 6);
+    });
+    withT(W / 2, 470, 1.2, -Math.PI / 2, () => S(() => ctx.arc(0, 0, 118, 0, Math.PI * 2 * eo(prog(lt, 1.5, 3))), 760, 1, .5, 2));
+    T('~48 HOURS', W / 2, 660, 24, { weight: 800, spacing: 3, a: prog(lt, 1.8, .6) });
+    T("Binance's own estimate", W / 2, 695, 15, { weight: 500, a: .55 * prog(lt, 2.4, .6) });
+  },
+  frozen(lt) {
+    const k = eo(prog(lt, .2, 1));
+    withT(W / 2, 450, 1.3, lt * .12, () => {
+      for (let i = 0; i < 6; i++) {
+        withT(0, 0, 1, i * Math.PI / 3, () => {
+          S(() => { ctx.moveTo(0, 0); ctx.lineTo(0, -100); }, 100, prog(lt, .2 + i * .1, .6), .9);
+          S(() => { ctx.moveTo(0, -60); ctx.lineTo(-22, -82); ctx.moveTo(0, -60); ctx.lineTo(22, -82); }, 70, prog(lt, .7 + i * .1, .5), .8, 2);
+        });
+      }
+    });
+    coin(W / 2, 450, 30, k, k);
+    T('$' + (3 * eo(prog(lt, 1.2, 2))).toFixed(1) + 'B', W / 2, 640, 52, { weight: 800, a: prog(lt, 1.2, .5) });
+    T('frozen on-chain by Tether, Circle & others', W / 2, 684, 15, { weight: 500, a: .6 * prog(lt, 3, .6) });
+  },
+  safe(lt) {
+    withT(W / 2, 460, 1.5, 0, () => {
+      S(() => { ctx.moveTo(0, -95); ctx.lineTo(75, -65); ctx.lineTo(75, 10); ctx.quadraticCurveTo(75, 70, 0, 100); ctx.quadraticCurveTo(-75, 70, -75, 10); ctx.lineTo(-75, -65); ctx.closePath(); }, 520, prog(lt, .1, 1.2), 1);
+      S(() => { ctx.moveTo(-28, 4); ctx.lineTo(-6, 28); ctx.lineTo(32, -22); }, 110, eo(prog(lt, 1.4, .7)), 1, 4);
+    });
+    T('"user funds are safe" — Binance', W / 2, 640, 17, { weight: 600, a: .75 * prog(lt, 2, .6) });
+    T('losses covered by SAFU fund + company funds', W / 2, 668, 15, { weight: 500, a: .55 * prog(lt, 3, .6) });
+    T('a promise, not a guarantee', W / 2, 706, 17, { weight: 700, a: .85 * prog(lt, 4.6, .6) });
+  },
+  scam(lt) {
+    withT(W / 2, 440, 1.4, 0, () => {
+      S(() => ctx.roundRect(-90, -58, 180, 116, 10), 600, prog(lt, .1, .9), 1);
+      S(() => { ctx.moveTo(-90, -50); ctx.lineTo(0, 12); ctx.lineTo(90, -50); }, 230, prog(lt, .6, .7), 1);
+    });
+    withT(W / 2 + 120, 360, .8 * (1 + .07 * Math.sin(lt * 7)), 0, () => warning(eo(prog(lt, 1.6, .5)), 1));
+    const a = prog(lt, 2.2, .6);
+    T('claim-your-refund-now', W / 2, 640, 18, { weight: 600, a: .8 * a, font: '"DejaVu Sans Mono", monospace' });
+    S(() => { ctx.moveTo(W / 2 - 128, 640); ctx.lineTo(W / 2 + 128, 640); }, 256, eo(prog(lt, 3.2, .5)), 1, 2.5);
+    T('FAKE.  NEVER CLICK.', W / 2, 690, 22, { weight: 800, spacing: 3, a: prog(lt, 3.8, .6) });
+  },
+  lesson(lt) {
+    withT(W / 2, 430, 1.4, 0, () => key(prog(lt, .2, 1.1), 1));
+    T('they hold your keys.', W / 2, 560, 19, { weight: 600, a: .8 * prog(lt, 1.6, .6) });
+    const pa = prog(lt, 3.2, .6);
+    ctx.save(); setStroke(pa * .9, 2); ctx.beginPath(); ctx.roundRect(W / 2 - 90, 610, 180, 52, 26); ctx.stroke(); ctx.restore();
+    T('2FA  ON', W / 2, 636, 22, { weight: 800, spacing: 3, a: pa });
+  }
+};
+
+// ---------- continuous motion layer ----------
+function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const R = rng(7);
+const PARTS = Array.from({ length: 70 }, () => ({ x: R() * W, y: R() * H, z: .3 + R() * .7, vx: (R() - .5) * 10, vy: 6 + R() * 12, ph: R() * 6.28, sz: .8 + R() * 1.6 }));
+function ambient(t, cx, cy) {
+  const pts = PARTS.map(p => ({
+    x: ((p.x + t * p.vx * p.z - cx * p.z * .6) % W + W) % W,
+    y: ((p.y - t * p.vy * p.z - cy * p.z * .6) % H + H) % H,
+    a: .12 + .3 * (.5 + .5 * Math.sin(t * 1.8 + p.ph)) * p.z, sz: p.sz * p.z
+  }));
+  ctx.save(); ctx.lineWidth = 1; ctx.shadowBlur = 0;
+  for (let i = 0; i < pts.length; i++) for (let k = i + 1; k < pts.length; k++) {
+    const dx = pts[i].x - pts[k].x, dy = pts[i].y - pts[k].y, d = Math.hypot(dx, dy);
+    if (d < 85) { ctx.strokeStyle = `rgba(255,255,255,${.13 * (1 - d / 85)})`; ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[k].x, pts[k].y); ctx.stroke(); }
+  }
+  pts.forEach(p => { ctx.fillStyle = `rgba(255,255,255,${p.a})`; ctx.shadowColor = 'rgba(255,255,255,.6)'; ctx.shadowBlur = 6; ctx.beginPath(); ctx.arc(p.x, p.y, p.sz, 0, 6.283); ctx.fill(); });
+  ctx.restore();
+}
+function pulseRings(lt, a) {
+  [0, 1.2].forEach(off => {
+    const k = ((lt + off) % 2.4) / 2.4;
+    ctx.save(); ctx.strokeStyle = `rgba(255,255,255,${.22 * (1 - k) * a})`; ctx.lineWidth = 1.5; ctx.shadowBlur = 0;
+    ctx.beginPath(); ctx.arc(W / 2, 470, 70 + k * 220, 0, 6.283); ctx.stroke(); ctx.restore();
+  });
+}
+
+const TD = 1.0; // transition length in seconds (scenes overlap, nothing ever goes to black)
+function drawScene(s, t, i, n) {
+  const lt = t - s.start + TD / 2, d = s.end - s.start + TD; // animation starts as soon as the scene begins blending in
+  const inn = i === 0 ? 1 : eio(prog(t, s.start - TD / 2, TD));
+  const out = i === n - 1 ? 1 : 1 - eio(prog(t, s.end - TD / 2, TD));
+  const a = inn * out; if (a <= .001) return;
+  const dx = (1 - inn) * 130 - (1 - out) * 130;          // slide in from right, out to left
+  const sc = (.94 + .06 * inn) * (1 + .07 * (1 - out));    // push-in feel
+  const blur = Math.max((1 - inn), (1 - out)) * 9;
+  // slow camera drift while the scene plays
+  const k = clamp(lt / d), camx = 14 * Math.sin(k * 3.1 + i), camy = -10 * k, cz = 1 + .045 * k;
+  ctx.save();
+  ctx.filter = blur > .4 ? `blur(${blur.toFixed(1)}px)` : 'none';
+  ctx.translate(W / 2 + dx, 480); ctx.scale(sc * cz, sc * cz); ctx.translate(-W / 2 + camx, -480 + camy);
+  GA = a;
+  head(s, lt, d);
+  ctx.save(); ctx.translate(0, 6 * Math.sin(lt * 1.5 + i));   // idle bob: icons never sit still
+  pulseRings(lt, a);
+  SC[s.icon](lt, d, s);
+  ctx.restore();
+  caption(s, lt, d);
+  ctx.restore(); GA = 1;
+  return { camx: dx + camx, camy };
+}
+
+function draw(t) {
+  ctx.setTransform(2, 0, 0, 2, 0, 0); ctx.setLineDash([]); ctx.filter = 'none';
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
+  const gx = W / 2 + 50 * Math.sin(t * .4), gy = 470 + 40 * Math.cos(t * .31);
+  const g = ctx.createRadialGradient(gx, gy, 20, gx, gy, 430);
+  g.addColorStop(0, 'rgba(255,255,255,0.075)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  ambient(t, 20 * Math.sin(t * .25), t * 4);
+  const sc = window.SCENES; let cam = { camx: 0, camy: 0 };
+  sc.forEach((s, i) => { if (t >= s.start - TD / 2 && t < s.end + TD / 2) drawScene(s, t, i, sc.length); });
+}
+window.draw = draw;
+</script></body></html>

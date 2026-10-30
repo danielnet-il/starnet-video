@@ -1,0 +1,70 @@
+{
+  "title": "Binance hack (Oct 29, 2026)",
+  "fps": 24,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 6,
+      "head": "BINANCE GOT HACKED",
+      "icon": "hack",
+      "narration": "Binance, the world's biggest crypto exchange, just lost about six point three billion dollars."
+    },
+    {
+      "start": 6,
+      "end": 13,
+      "head": "THE BIGGEST HACK EVER",
+      "icon": "record",
+      "narration": "Reports call it the biggest crypto hack ever, more than four times the old record."
+    },
+    {
+      "start": 13,
+      "end": 22,
+      "head": "HOW IT HAPPENED",
+      "icon": "laptop",
+      "narration": "Early findings point to a hacked engineer's laptop. Binance says no private keys leaked. Analysts suspect North Korea, unconfirmed."
+    },
+    {
+      "start": 22,
+      "end": 28,
+      "head": "WITHDRAWALS PAUSED",
+      "icon": "paused",
+      "narration": "Binance paused withdrawals. It says it expects them back within 48 hours."
+    },
+    {
+      "start": 28,
+      "end": 35,
+      "head": "$3B ALREADY FROZEN",
+      "icon": "frozen",
+      "narration": "About three billion dollars has already been frozen on-chain, mostly by Tether and Circle."
+    },
+    {
+      "start": 35,
+      "end": 42,
+      "head": "ARE YOUR FUNDS SAFE?",
+      "icon": "safe",
+      "narration": "Binance says user funds are safe, and it will cover losses. That is a promise, not a guarantee."
+    },
+    {
+      "start": 42,
+      "end": 50,
+      "head": "WATCH OUT FOR SCAMS",
+      "icon": "scam",
+      "narration": "Now expect scams: fake refund emails and recovery links. Never click them. Use only the official app."
+    },
+    {
+      "start": 50,
+      "end": 58,
+      "head": "THE LESSON",
+      "icon": "lesson",
+      "narration": "The lesson: on an exchange, they hold your keys. Know the risk, and turn on 2FA."
+    },
+    {
+      "start": 58,
+      "end": 65,
+      "head": "ONE CRYPTO BASIC A DAY",
+      "icon": "outro",
+      "foot": "Reports as of Oct 30. Developing story. Not financial advice.",
+      "narration": "Follow for one crypto basic a day. Reports as of Oct 30. Not financial advice."
+    }
+  ]
+}

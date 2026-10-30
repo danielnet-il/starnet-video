@@ -1,0 +1,14 @@
+{
+  "title": "Exchange vs Wallet",
+  "fps": 24,
+  "scenes": [
+    {"start": 0.0,  "end": 5.0,  "head": "WHERE IS YOUR CRYPTO?",          "icon": "question", "narration": "Where do you keep your crypto? Most beginners never ask."},
+    {"start": 5.0,  "end": 11.5, "head": "ON AN EXCHANGE",                 "icon": "exchange", "narration": "Most beginners leave it on an exchange. It's easy, like a bank account."},
+    {"start": 11.5, "end": 18.5, "head": "NOT YOUR KEYS, NOT YOUR COINS",  "icon": "key",      "narration": "But the exchange holds the keys. And whoever holds the keys, holds the coins."},
+    {"start": 18.5, "end": 25.5, "head": "EXCHANGES CAN FAIL",             "icon": "risk",     "narration": "Exchanges can get hacked, or freeze withdrawals when it matters most."},
+    {"start": 25.5, "end": 32.0, "head": "A WALLET = YOUR KEYS",           "icon": "wallet",   "narration": "A wallet puts the keys in your hands."},
+    {"start": 32.0, "end": 39.0, "head": "CONTROL vs CONVENIENCE",         "icon": "scales",   "narration": "More control, but more responsibility. Lose your recovery phrase, and the coins are gone."},
+    {"start": 39.0, "end": 46.0, "head": "TRADING vs HOLDING",             "icon": "compare",  "narration": "Rule of thumb: trading, keep it on an exchange. Long-term holding, consider your own wallet."},
+    {"start": 46.0, "end": 52.0, "head": "ONE CRYPTO BASIC A DAY",         "icon": "outro",    "narration": "Follow for one crypto basic a day. Not financial advice."}
+  ]
+}

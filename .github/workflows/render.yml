@@ -1,0 +1,61 @@
+name: render-video
+on:
+  repository_dispatch:
+    types: [render-video]
+  workflow_dispatch:
+    inputs:
+      example:
+        description: Example scenes file to render (test only, never publishes)
+        default: examples/binance_hack.json
+concurrency:
+  group: render
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter fonts-dejavu-core
+      - name: Playwright
+        run: pip install playwright && python -m playwright install --with-deps chromium
+      - uses: actions/cache@v4
+        with:
+          path: tools
+          key: tts-tools-v1
+      - name: Validate request
+        env:
+          PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          EXAMPLE: ${{ github.event.inputs.example }}
+        run: python3 prepare.py
+      - name: Build video
+        run: mkdir -p out && python3 build.py job.json out/video.mp4
+      - name: Publish release asset (public URL)
+        id: rel
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="video-${{ github.run_id }}"
+          gh release create "$TAG" out/video.mp4 --title "$TAG" --notes "Auto-rendered"
+          echo "url=https://github.com/${{ github.repository }}/releases/download/$TAG/video.mp4" >> "$GITHUB_OUTPUT"
+      - name: Hand the video to Make (only when publish=true)
+        env:
+          HOOK: ${{ secrets.MAKE_PUBLISH_HOOK }}
+          VIDEO_URL: ${{ steps.rel.outputs.url }}
+        run: |
+          if [ "$(jq -r .publish meta.json)" != "true" ]; then echo "publish=false, skipping hand-off"; exit 0; fi
+          if [ -z "$HOOK" ]; then echo "MAKE_PUBLISH_HOOK secret missing"; exit 1; fi
+          jq -n --arg u "$VIDEO_URL" --slurpfile m meta.json \
+            '{video_url:$u, viral_title:$m[0].viral_title, caption:$m[0].caption, hashtags:$m[0].hashtags}' \
+            | curl -sS -f -X POST -H 'Content-Type: application/json' --data @- "$HOOK"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video
+          path: out/video.mp4
+          retention-days: 7
