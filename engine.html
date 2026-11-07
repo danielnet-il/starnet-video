@@ -299,7 +299,8 @@ Object.assign(SC, {
   chartdown(lt, d, s) {
     const x0 = 70, x1 = 470, yb = 640, yt = 290;
     S(() => { ctx.moveTo(x0, yt - 10); ctx.lineTo(x0, yb); ctx.lineTo(x1 + 10, yb); }, 700, eo(prog(lt, .1, .7)), .6, 1.8);
-    const ys = [.16, .2, .13, .18, .1, .15, .08, .28, .52, .6, .78, .86, .94];
+    let ys = [.16, .2, .13, .18, .1, .15, .08, .28, .52, .6, .78, .86, .94];
+    if (s.dir === 'up') ys = ys.map(v => 1 - v);   // rising chart
     const n = ys.length, pts = ys.map((v, i) => [lerp(x0 + 20, x1, i / (n - 1)), lerp(yt, yb - 30, v)]);
     const segs = (n - 1) * eo(prog(lt, .6, 2.8)), k = Math.floor(segs);
     ctx.save(); setStroke(1, 3.2); ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);

@@ -24,6 +24,7 @@ def main():
         o = {'head': clean(s['head'], 40).upper(), 'icon': s['icon'], 'narration': clean(s['narration'], 260)}
         if s.get('foot'): o['foot'] = clean(s['foot'], 90)
         if s.get('big'): o['big'] = clean(s['big'], 14)
+        if s.get('dir') in ('up', 'down'): o['dir'] = s['dir']
         if s.get('sub'): o['sub'] = clean(s['sub'], 48)
         if s.get('value') is not None: o['value'] = max(0, min(100, int(s['value'])))
         if s.get('items'): o['items'] = [clean(x, 30).upper() for x in list(s['items'])[:3]]
