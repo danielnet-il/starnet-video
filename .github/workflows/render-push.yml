@@ -1,0 +1,47 @@
+name: render-on-push
+on:
+  push:
+    paths: ['requests/**']
+concurrency:
+  group: render-push
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter fonts-dejavu-core
+      - name: Python deps
+        run: pip install playwright edge-tts && python -m playwright install --with-deps chromium
+      - name: Find new request
+        id: req
+        run: |
+          F=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- 'requests/*.json' | head -1)
+          echo "file=$F" >> "$GITHUB_OUTPUT"
+          echo "Request: $F"
+      - name: Validate and build
+        if: steps.req.outputs.file != ''
+        env:
+          REQ: ${{ steps.req.outputs.file }}
+        run: |
+          PAYLOAD="$(cat "$REQ")" EXAMPLE=x python3 prepare.py
+          mkdir -p out && EDGE_VOICE=en-US-AndrewNeural python3 build.py job.json out/v.mp4
+      - name: Commit video
+        if: steps.req.outputs.file != ''
+        env:
+          REQ: ${{ steps.req.outputs.file }}
+        run: |
+          N=$(basename "$REQ" .json)
+          mkdir -p videos && cp out/v.mp4 "videos/$N.mp4"
+          git config user.name "render-bot" && git config user.email "bot@users.noreply.github.com"
+          git add videos && git commit -m "Render $N (neural voice)" 
+          git pull --rebase -q && git push -q

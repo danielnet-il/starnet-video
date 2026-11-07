@@ -38,12 +38,19 @@ def duration(f):
 
 def main(src, dst):
     cfg = json.load(open(src)); fps = cfg.get('fps', 24); scenes = cfg['scenes']
-    piper, voice = ensure_tools(); tmp = tempfile.mkdtemp(prefix='build_')
+    edge = shutil.which('edge-tts')
+    if edge: piper = voice = None
+    else: piper, voice = ensure_tools()
+    tmp = tempfile.mkdtemp(prefix='build_')
     # 1) voice per scene
     for i, s in enumerate(scenes):
         txt = os.path.join(tmp, f'l{i}.txt'); wav = os.path.join(tmp, f'l{i}.wav')
         open(txt, 'w').write(speakable(s['narration']))
-        sh(piper, '--model', voice, '--sentence_silence', '0.25', '--output_file', wav, stdin=open(txt), stderr=subprocess.DEVNULL)
+        if edge:
+            mp3 = os.path.join(tmp, f'l{i}.mp3')
+            sh(edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--file', txt, '--write-media', mp3, stderr=subprocess.DEVNULL)
+            sh('ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', '44100', '-ac', '1', wav)
+        else: sh(piper, '--model', voice, '--sentence_silence', '0.25', '--output_file', wav, stdin=open(txt), stderr=subprocess.DEVNULL)
         s['_voice'] = duration(wav)
     # 2) timings from the audio
     t = 0.0
