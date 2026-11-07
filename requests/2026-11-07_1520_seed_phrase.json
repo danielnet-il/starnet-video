@@ -1,0 +1,10 @@
+{"title":"What Is a Seed Phrase? Never Share These Words (Crypto Beginner Guide)","caption":"A seed phrase is the master backup of a crypto wallet. Here is what it is and how to keep it safe.","hashtags":"#crypto #bitcoin #seedphrase #cryptobasics","publish":true,
+"scenes":[
+{"head":"WHAT IS A SEED PHRASE?","icon":"question","narration":"Many crypto wallets give you a list of twelve or twenty four words. What are they, and why do they matter so much?"},
+{"head":"A MASTER BACKUP","icon":"checklist","items":["Twelve or 24 words","Recreates your wallet","Works on any device"],"narration":"These words are a master backup. With them, a wallet can be restored on a new phone or computer."},
+{"head":"WHO HOLDS THE WORDS","icon":"checklist","items":["Words equal access","No reset button","Lost words stay lost"],"narration":"Whoever has the words can control the funds. There is no help desk to reset them if they are lost."},
+{"head":"SCAMS LOVE THIS","icon":"gauge","value":90,"sub":"DANGER: NEVER SHARE IT","narration":"Scammers pretend to be support and ask for your words. Real wallet teams and exchanges never need them."},
+{"head":"HOW TO STORE IT","icon":"checklist","items":["Write it on paper","Keep it offline","Store it somewhere safe"],"narration":"Many experts suggest writing the words on paper and keeping them offline, away from screenshots and cloud notes."},
+{"head":"BEFORE YOU START","icon":"checklist","items":["Never type it online","Test with a small amount","Learn before you invest"],"narration":"Never type your words into a website you reached through a link. Start small, and learn each step first."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 7. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November seventh. Not financial advice."}
+]}
