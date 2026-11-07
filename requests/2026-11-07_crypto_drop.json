@@ -1,0 +1,58 @@
+{
+  "title": "Why Did Crypto Just Crash? (Simple Explanation)",
+  "caption": "Bitcoin fell about 6% in a day, along with tech stocks. Here is why it happened and what beginners should remember.",
+  "hashtags": "#crypto #bitcoin #cryptonews #ethereum",
+  "publish": true,
+  "scenes": [
+    {
+      "head": "CRYPTO JUST DROPPED",
+      "icon": "chartdown",
+      "big": "-6%",
+      "sub": "BITCOIN IN ONE DAY",
+      "narration": "Bitcoin fell about six percent in a day, to near seventy five thousand. Ethereum fell about eight percent."
+    },
+    {
+      "head": "IT FELL WITH STOCKS",
+      "icon": "link",
+      "sub": "AI spending doubts and borrowing costs",
+      "narration": "It started in stocks. U.S. tech shares sold off, and the Nasdaq had its worst day since twenty twenty."
+    },
+    {
+      "head": "LEVERAGE MAKES IT WORSE",
+      "icon": "liquidation",
+      "big": "$1B+",
+      "sub": "LIQUIDATED IN 24 HOURS",
+      "narration": "When prices fall fast, traders who borrowed get forced out. Over one billion dollars was liquidated, pushing prices lower."
+    },
+    {
+      "head": "BIG MONEY LEFT TOO",
+      "icon": "outflow",
+      "big": "$430M",
+      "sub": "BITCOIN ETF OUTFLOWS IN ONE DAY",
+      "narration": "Bitcoin E T Fs also lost about four hundred thirty million dollars in one day, the biggest outflow this month."
+    },
+    {
+      "head": "FEAR TOOK OVER",
+      "icon": "gauge",
+      "value": 28,
+      "sub": "FEAR",
+      "narration": "The crypto fear and greed index fell to twenty eight, down from fifty the day before. That reading means fear."
+    },
+    {
+      "head": "THREE BASICS",
+      "icon": "checklist",
+      "items": [
+        "Don't borrow to trade",
+        "Only money you can lose",
+        "Know your plan first"
+      ],
+      "narration": "Drops like this are normal in crypto. Three basics: don't borrow to trade, use only money you can lose, and have a plan."
+    },
+    {
+      "head": "ONE CRYPTO BASIC A DAY",
+      "icon": "outro",
+      "foot": "Prices as of Nov 6. Not financial advice.",
+      "narration": "Follow for one crypto basic a day. Prices as of November sixth. Not financial advice."
+    }
+  ]
+}
