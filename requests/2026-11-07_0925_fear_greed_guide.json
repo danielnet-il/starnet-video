@@ -1,0 +1,60 @@
+{
+  "title": "How to Read the Crypto Fear and Greed Index (Beginner Guide)",
+  "caption": "The Fear and Greed Index scores crypto sentiment from zero to one hundred. Here is what it measures and how beginners should use it.",
+  "hashtags": "#crypto #bitcoin #cryptonews #feargreed",
+  "publish": true,
+  "scenes": [
+    {
+      "head": "WHAT IS THIS NUMBER?",
+      "icon": "question",
+      "narration": "You see it everywhere in crypto news: the Fear and Greed Index. What does that number actually mean?"
+    },
+    {
+      "head": "A MOOD SCORE",
+      "icon": "gauge",
+      "value": 50,
+      "sub": "0 = FEAR, 100 = GREED",
+      "narration": "It scores crypto market mood from zero to one hundred. Zero is extreme fear. One hundred is extreme greed."
+    },
+    {
+      "head": "LOW MEANS FEAR",
+      "icon": "gauge",
+      "value": 15,
+      "sub": "EXTREME FEAR: 0 TO 24",
+      "narration": "A reading from zero to twenty four means extreme fear. Investors are nervous and selling."
+    },
+    {
+      "head": "HIGH MEANS GREED",
+      "icon": "gauge",
+      "value": 85,
+      "sub": "EXTREME GREED: 75 TO 100",
+      "narration": "Seventy five and above means extreme greed. People are excited, and often buying fast."
+    },
+    {
+      "head": "WHAT GOES IN",
+      "icon": "checklist",
+      "items": [
+        "Volatility and volume",
+        "Social media buzz",
+        "Search trends"
+      ],
+      "narration": "The score mixes price swings, trading volume, social media activity, Bitcoin dominance, and Google search trends."
+    },
+    {
+      "head": "HOW TO USE IT",
+      "icon": "checklist",
+      "items": [
+        "It shows mood, not the future",
+        "Never trade on it alone",
+        "Do your own research"
+      ],
+      "narration": "Remember, it shows mood, not the future. Never rely on one number alone. Always do your own research."
+    },
+    {
+      "head": "ONE CRYPTO BASIC A DAY",
+      "icon": "outro",
+      "foot": "Reports as of Nov 7. Not financial advice.",
+      "narration": "Follow for one crypto basic a day. Reports as of November seventh. Not financial advice."
+    }
+  ]
+}
