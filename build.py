@@ -48,7 +48,7 @@ def main(src, dst):
         open(txt, 'w').write(speakable(s['narration']))
         if edge:
             mp3 = os.path.join(tmp, f'l{i}.mp3')
-            sh(edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--file', txt, '--write-media', mp3, stderr=subprocess.DEVNULL)
+            sh(edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--rate=' + os.environ.get('EDGE_RATE', '+30%'), '--file', txt, '--write-media', mp3, stderr=subprocess.DEVNULL)
             sh('ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', '44100', '-ac', '1', wav)
         else: sh(piper, '--model', voice, '--sentence_silence', '0.25', '--output_file', wav, stdin=open(txt), stderr=subprocess.DEVNULL)
         s['_voice'] = duration(wav)
