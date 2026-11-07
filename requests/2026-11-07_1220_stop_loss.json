@@ -1,0 +1,10 @@
+{"title":"What Is a Stop-Loss? Protect Your Crypto Trades (Beginner Guide)","caption":"A stop-loss is an automatic exit order that limits how much one trade can cost you. Here is how it works, and its limits.","hashtags":"#crypto #bitcoin #stoploss #cryptobasics","publish":true,
+"scenes":[
+{"head":"WHAT IS A STOP-LOSS?","icon":"question","narration":"Prices can fall fast. A stop-loss is a simple tool traders use to limit how much one trade can cost them."},
+{"head":"AN AUTOMATIC EXIT","icon":"checklist","items":["Pick a price","Order waits quietly","Sells if price hits it"],"narration":"You choose a price in advance. If the market falls to that price, your order sells automatically, with no panic."},
+{"head":"A SIMPLE EXAMPLE","icon":"chartdown","big":"-10%","sub":"YOUR CHOSEN EXIT LEVEL","narration":"Say you set your exit ten percent below your entry. A deeper drop is then cut short, and your loss stays limited."},
+{"head":"WHY IT HELPS","icon":"gauge","value":30,"sub":"FEAR CAN RULE YOUR CHOICES","narration":"Fear and greed push people into bad choices. A plan made calmly beforehand helps remove emotion from the moment."},
+{"head":"IT IS NOT PERFECT","icon":"checklist","items":["Fast gaps skip prices","Sells at worse price","Can trigger on dips"],"narration":"It has limits. In fast markets the sale can happen below your price, and a quick dip can trigger it before a rebound."},
+{"head":"BEFORE YOU TRADE","icon":"checklist","items":["Know your risk","Never use borrowed money","Learn before you trade"],"narration":"Know how much you can afford to lose, avoid borrowed money, and learn the tools before using real funds."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 7. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November seventh. Not financial advice."}
+]}
