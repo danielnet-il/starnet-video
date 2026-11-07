@@ -51,11 +51,11 @@ function T(str, x, y, size, o = {}) {
 function withT(x, y, s, rot, fn) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot || 0); ctx.scale(s, s); fn(); ctx.restore(); }
 
 // ---------- icons (centered on 0,0, ~ 200 units wide) ----------
-function coin(x, y, r, a = 1, p = 1) {
+function coin(x, y, r, a = 1, p = 1, sym = '₿') {
   if (a <= 0 || p <= 0) return;
   S(() => ctx.arc(x, y, r, 0, Math.PI * 2), r * 6.4, p, a, 2.2);
   S(() => ctx.arc(x, y, r * .78, 0, Math.PI * 2), r * 5, p, a * .35, 1.2);
-  if (p > .6) T('₿', x, y + r * .04, r * 1.05, { weight: 700, a: a * clamp((p - .6) / .4), font: COIN_FONT });
+  if (p > .6) T(sym, x, y + r * .04, r * 1.05, { weight: 700, a: a * clamp((p - .6) / .4), font: COIN_FONT });
 }
 function building(p = 1, a = 1) {
   S(() => { ctx.moveTo(-95, -38); ctx.lineTo(0, -100); ctx.lineTo(95, -38); ctx.closePath(); }, 420, prog(p, 0, .5), a);
@@ -192,11 +192,47 @@ const SC = {
   },
   outro(lt, d, s) {
     const k = eo(prog(lt, .2, .8));
-    coin(W / 2, 470, 70 * (1 + .03 * Math.sin(lt * 3)), k, prog(lt, .2, .8));
+    coin(W / 2, 470, 70 * (1 + .03 * Math.sin(lt * 3)), k, prog(lt, .2, .8), s.sym || '₿');
     T('FOLLOW', W / 2, 610, 22, { weight: 800, spacing: 6, a: prog(lt, 1.2, .6) });
     T(s.foot || 'Not financial advice.', W / 2, 740, 15, { weight: 500, a: .5 * prog(lt, 2, .6) });
   },
 
+  // ---- Money / economics / psychology scenes ----
+  compound(lt, d, s) {
+    const base = 700, n = 7, bw = 46, gap = 18, x0 = (W - (n * bw + (n - 1) * gap)) / 2;
+    S(() => { ctx.moveTo(50, base); ctx.lineTo(W - 50, base); }, 440, eo(prog(lt, 0, .6)), .6, 1.8);
+    for (let i = 0; i < n; i++) {
+      const hh = (24 + 300 * Math.pow(i / (n - 1), 2.2)) * eo(prog(lt, .4 + i * .35, .7)), x = x0 + i * (bw + gap);
+      ctx.save(); ctx.fillStyle = `rgba(255,255,255,${.07 * GA})`; ctx.fillRect(x, base - hh, bw, hh); ctx.restore();
+      S(() => ctx.rect(x, base - hh, bw, hh), 2 * (bw + hh), prog(lt, .4 + i * .35, .7), 1, 2);
+    }
+    T(s.big || '', W / 2, 300, 58, { weight: 800, a: eo(prog(lt, 3, .6)) });
+    T(s.sub || '', W / 2, 345, 15, { weight: 600, spacing: 3, a: .7 * prog(lt, 3.5, .6) });
+  },
+  inflation(lt, d, s) {
+    const k = 1 - .45 * eio(prog(lt, 1, 3));
+    coin(W / 2, 450, 95 * k * (1 + .02 * Math.sin(lt * 3)), eo(prog(lt, .1, .7)), prog(lt, .1, .7), '$');
+    S(() => ctx.arc(W / 2, 450, 95, 0, 6.283), 600, prog(lt, .1, 1), .25, 1.5);
+    const price = 4 * (1 + .6 * eio(prog(lt, 1, 3)));
+    T('$' + price.toFixed(2), W / 2, 620, 54, { weight: 800, a: prog(lt, .8, .5) });
+    T('SAME COFFEE, LATER', W / 2, 660, 14, { weight: 700, spacing: 3, a: .55 * prog(lt, 1.2, .6) });
+    T(s.big || '', W / 2, 330, 40, { weight: 800, a: eo(prog(lt, 3.6, .6)) });
+    T(s.sub || '', W / 2, 735, 15, { weight: 600, spacing: 3, a: .7 * prog(lt, 4, .6) });
+  },
+  brain(lt, d, s) {
+    const cx = W / 2, cy = 460, pr = 1 + .03 * Math.sin(lt * 3);
+    S(() => ctx.arc(cx - 52, cy, 82 * pr, Math.PI * .5, Math.PI * 1.5), 260, eo(prog(lt, .1, 1)), 1, 3);
+    S(() => ctx.arc(cx + 52, cy, 82 * pr, Math.PI * 1.5, Math.PI * 2.5), 260, eo(prog(lt, .4, 1)), 1, 3);
+    S(() => { ctx.moveTo(cx, cy - 82); ctx.lineTo(cx, cy + 82); }, 164, prog(lt, .8, .6), .5, 2);
+    for (let i = 0; i < 4; i++) {
+      const y = cy - 45 + i * 30, a = prog(lt, 1.2 + i * .3, .4);
+      S(() => { ctx.moveTo(cx - 100, y); ctx.quadraticCurveTo(cx - 70, y - 14, cx - 40, y); }, 70, a, .7, 2);
+      S(() => { ctx.moveTo(cx + 40, y); ctx.quadraticCurveTo(cx + 70, y + 14, cx + 100, y); }, 70, a, .7, 2);
+    }
+    coin(cx, cy + 10, 20, eo(prog(lt, 2.4, .6)), prog(lt, 2.4, .6), '$');
+    T(s.big || '', W / 2, 620, 40, { weight: 800, a: eo(prog(lt, 3, .6)) });
+    T(s.sub || '', W / 2, 665, 15, { weight: 600, spacing: 3, a: .7 * prog(lt, 3.5, .6) });
+  },
   // ---- Binance news scenes ----
   hack(lt) {
     withT(W / 2 - 20, 360, 1.15, 0, () => building(prog(lt, .1, 1), .95));

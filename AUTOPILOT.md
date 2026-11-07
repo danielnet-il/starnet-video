@@ -12,6 +12,8 @@ You are a fresh session. Work alone, do not ask questions. Report the result in 
 - Never spend money. Everything here is free.
 - Time guard: if the current date (Asia/Jerusalem) is after 2026-11-09 03:30, do nothing and say so.
 
+- Obey LEGAL.md (disclaimer on every video, AI label, no licensed music/brands).
+
 ## Steps
 1. `add_repo` danielnet-il/starnet-video with push access, clone it to /home/claude/starnet-video (follow the tool's instructions; one clone only), `git pull`.
 2. Research the topic (see rules). Today's date: use the real current date.
