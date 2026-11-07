@@ -1,0 +1,10 @@
+{"title":"What Is Market Cap? Why a Low Price Can Fool You (Crypto Beginner Guide)","caption":"Price alone does not show how big a coin really is. Market cap is the simple way to compare. Educational only.","hashtags":"#crypto #bitcoin #cryptobasics #marketcap","publish":true,
+"scenes":[
+{"head":"CHEAP COIN, BIG COIN?","icon":"question","narration":"A coin costs one cent, another costs thousands. Does the cheap one have more room to grow?"},
+{"head":"PRICE IS NOT SIZE","icon":"checklist","items":["Price is one coin","Supply is how many exist","Both matter together"],"narration":"Price tells you the cost of one coin. It does not tell you how many coins exist, so it can mislead."},
+{"head":"THE SIMPLE FORMULA","icon":"checklist","items":["Price of one coin","Times coins in supply","Equals market cap"],"narration":"Market cap equals the price of one coin times the number of coins in circulation. It shows the total value."},
+{"head":"A QUICK EXAMPLE","icon":"chartdown","dir":"up","big":"10 x 100","sub":"PRICE TIMES COINS = 1000","narration":"Say a coin costs ten dollars and one hundred coins exist. Its market cap is one thousand dollars."},
+{"head":"WHY IT MATTERS","icon":"gauge","value":50,"sub":"BIGGER CAP, USUALLY LESS WILD","narration":"Larger market caps often move less sharply than tiny ones. Small caps can swing wildly and can be easier to manipulate."},
+{"head":"THINGS TO REMEMBER","icon":"checklist","items":["Cheap price is not cheap value","Check the supply","Small caps are riskier"],"narration":"A low price does not mean a bargain. Always check the supply, and know that smaller coins carry more risk."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 7. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November seventh. Not financial advice."}
+]}
