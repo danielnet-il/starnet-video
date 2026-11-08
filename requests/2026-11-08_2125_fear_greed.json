@@ -1,0 +1,10 @@
+{"title":"Fear & Greed Index Explained: What Do the Numbers Mean? (Crypto Beginner Guide)","caption":"Educational only. Not financial advice. The Fear and Greed Index turns market mood into one number from zero to one hundred. Here is how to read it. Sources: CoinGecko, KuCoin Learn.","hashtags":"#crypto #bitcoin #cryptobasics #feargreedindex #cryptoeducation","publish":true,
+"scenes":[
+{"head":"FEAR OR GREED?","icon":"question","narration":"Is the crypto market scared or greedy right now? There is a popular index that tries to answer that with one number."},
+{"head":"ONE NUMBER","icon":"gauge","value":50,"sub":"SCALE FROM 0 TO 100","narration":"The Fear and Greed Index runs from zero to one hundred. Zero means extreme fear. One hundred means extreme greed."},
+{"head":"LOW IS FEAR","icon":"gauge","value":15,"sub":"EXTREME FEAR: ABOUT 0 TO 24","narration":"Low scores mean investors are nervous. Roughly zero to twenty four is called extreme fear."},
+{"head":"HIGH IS GREED","icon":"gauge","value":85,"sub":"EXTREME GREED: ABOUT 75 TO 100","narration":"High scores mean people are excited and chasing prices. Roughly seventy five and up is called extreme greed."},
+{"head":"WHAT GOES IN","icon":"checklist","items":["Volatility","Momentum and volume","Social media and trends"],"narration":"It blends several signals, mainly Bitcoin volatility, trading momentum and volume, social media activity, and search trends."},
+{"head":"NOT A CRYSTAL BALL","icon":"checklist","items":["Mood, not a forecast","Focused on Bitcoin","Cannot predict prices"],"narration":"It measures mood, not the future. It focuses on Bitcoin and cannot predict prices, so never use it as your only guide."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
