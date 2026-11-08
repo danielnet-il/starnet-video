@@ -1,0 +1,10 @@
+{"title":"Proof of Work vs Proof of Stake: How Blockchains Agree (Beginner Guide)","caption":"Educational only. Not financial advice. Proof of work vs proof of stake in plain English. Sources: ethereum.org, CBC, FXStreet. AI-generated voice.","hashtags":"#crypto #bitcoin #ethereum #cryptobasics #cryptoeducation","publish":true,
+"scenes":[
+{"head":"WHO KEEPS IT HONEST?","icon":"question","narration":"A blockchain has no boss. So how does everyone agree on which transactions are real?"},
+{"head":"PROOF OF WORK","icon":"checklist","items":["Computers race to solve a puzzle","Winner adds the block","Uses lots of electricity"],"narration":"Bitcoin uses proof of work. Computers race to solve a puzzle, and the winner adds the next block."},
+{"head":"THE COST IS THE POINT","icon":"checklist","items":["Cheating costs real energy","Attacks get expensive","Simple but power hungry"],"narration":"The energy cost makes cheating expensive. But it also means the network uses a lot of power."},
+{"head":"PROOF OF STAKE","icon":"checklist","items":["Validators lock up coins","Chosen to add blocks","Cheaters can lose coins"],"narration":"Proof of stake works differently. Validators lock up their own coins, and dishonest ones can lose them."},
+{"head":"ETHEREUM SWITCHED","icon":"chartdown","big":"ABOUT 99%","sub":"LESS ENERGY AFTER 2022 MERGE","narration":"Ethereum switched to proof of stake in September twenty twenty two. Reports say it cut its energy use by about ninety nine percent."},
+{"head":"TRADE OFFS","icon":"checklist","items":["Both are widely used","Each has critics","Different security models"],"narration":"Both systems are widely used, and each has critics. They simply make different trade offs."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
