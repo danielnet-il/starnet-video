@@ -1,0 +1,10 @@
+{"title":"Hot Wallet vs Cold Wallet: What's the Difference? (Crypto Beginner Guide)","caption":"Educational only. Not financial advice. Hot vs cold wallets in plain English. Sources: Ledger, Ripple, QuickNode, MoonPay. AI-generated voice.","hashtags":"#crypto #bitcoin #cryptowallet #cryptobasics #cryptoeducation","publish":true,
+"scenes":[
+{"head":"WHERE ARE YOUR COINS?","icon":"question","narration":"Crypto is not stored in an app. So what actually holds it? The answer is your wallet."},
+{"head":"HOT WALLET","icon":"checklist","items":["Connected to the internet","Phone or browser app","Easy for daily use"],"narration":"A hot wallet is connected to the internet. It is convenient, like cash in your pocket."},
+{"head":"HOT WALLET RISK","icon":"checklist","items":["Hackers can target it","Phishing and fake apps","Keep only small amounts"],"narration":"Being online also makes it a target for hackers and phishing, so many people keep small amounts there."},
+{"head":"COLD WALLET","icon":"checklist","items":["Keys kept offline","Often a small device","Harder to hack remotely"],"narration":"A cold wallet keeps your private keys offline, often on a small device. That makes remote attacks much harder."},
+{"head":"COLD WALLET RISK","icon":"checklist","items":["Lose it, lose access","Backup phrase is vital","Never share the phrase"],"narration":"But if you lose it and your backup phrase, nobody can restore access. Never share that phrase with anyone."},
+{"head":"BOTH HAVE TRADE OFFS","icon":"checklist","items":["Hot: easy, more exposed","Cold: safer, less handy","Many people use both"],"narration":"Hot is easy but more exposed. Cold is safer but less handy. Many people use both."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
