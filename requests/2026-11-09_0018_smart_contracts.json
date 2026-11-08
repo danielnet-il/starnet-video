@@ -1,0 +1,69 @@
+{
+"title": "What Is a Smart Contract? Crypto's Vending Machine Explained (Beginner Guide)",
+"caption": "Educational only. Not financial advice. A smart contract is code on a blockchain that runs by itself. Here is how it works and where it can go wrong. Sources: EasyCrypto, CoinMarketCap Academy. AI-generated voice.",
+"hashtags": "#crypto #ethereum #cryptobasics #smartcontracts #cryptoeducation",
+"publish": true,
+"scenes": [
+{
+"head": "CODE THAT RUNS ITSELF",
+"icon": "question",
+"narration": "What if a deal could carry itself out, with no bank and no middleman? That is the idea behind a smart contract."
+},
+{
+"head": "A VENDING MACHINE",
+"icon": "checklist",
+"items": [
+"Put in the right input",
+"Rules get checked",
+"Result is delivered"
+],
+"narration": "Think of a vending machine. You insert money, pick a snack, and the machine follows its rules and delivers. No clerk needed."
+},
+{
+"head": "IF THIS, THEN THAT",
+"icon": "checklist",
+"items": [
+"Lives on a blockchain",
+"Uses if-then rules",
+"Runs automatically"
+],
+"narration": "A smart contract is a program stored on a blockchain. It uses if-then rules and runs automatically when the conditions are met."
+},
+{
+"head": "WHERE YOU SEE THEM",
+"icon": "checklist",
+"items": [
+"Decentralized exchanges",
+"N F T marketplaces",
+"Supply chain tracking"
+],
+"narration": "They power decentralized exchanges, N F T marketplaces, and even some supply chain tracking."
+},
+{
+"head": "HUMANS WRITE THE CODE",
+"icon": "checklist",
+"narration": "But people write the code, and mistakes happen. Flaws in a contract have led to big losses in decentralized finance.",
+"items": [
+"Written by people",
+"Bugs can be exploited",
+"Real funds can be lost"
+]
+},
+{
+"head": "HARD TO FIX",
+"icon": "checklist",
+"items": [
+"Hard to change once live",
+"Look for a trusted audit",
+"Never copy code blindly"
+],
+"narration": "Once live, a contract is generally hard to change. Reputable audits help, but they are no guarantee."
+},
+{
+"head": "ONE CRYPTO BASIC A DAY",
+"icon": "outro",
+"foot": "Reports as of Nov 9. Not financial advice.",
+"narration": "Follow for one crypto basic a day. Reports as of November ninth. Not financial advice."
+}
+]
+}
