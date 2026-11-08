@@ -1,0 +1,10 @@
+{"title":"What Is a Stablecoin? Why Some Crypto Tries Not to Move (Beginner Guide)","caption":"Educational only. Not financial advice. What a stablecoin is, why it exists, and what can still go wrong. Plain English for beginners. AI-generated voice.","hashtags":"#crypto #cryptobasics #stablecoin #blockchain #cryptonews","publish":true,
+"scenes":[
+{"head":"CRYPTO THAT STAYS STILL?","icon":"question","narration":"Most crypto jumps around all day. So what is a coin that is built to stay at one price?"},
+{"head":"WHAT IT IS","icon":"checklist","items":["A coin tied to an asset","Often the US dollar","Aims for one to one"],"narration":"A stablecoin is a crypto coin designed to track another asset, most often the US dollar, aiming for one to one."},
+{"head":"WHY IT EXISTS","icon":"checklist","items":["Move value fast","Park value between trades","Send across borders"],"narration":"People use them to move value quickly, to hold value between trades, and to send money across borders."},
+{"head":"HOW IT STAYS STABLE","icon":"checklist","items":["Backed by reserves","Or backed by crypto","Or by code rules"],"narration":"Some are backed by cash and similar reserves. Others are backed by crypto, or by code rules that try to hold the price."},
+{"head":"IT CAN SLIP","icon":"gauge","value":50,"sub":"STABLE IS NOT A GUARANTEE","narration":"Stable does not mean safe. A coin can lose its peg if people doubt the reserves or the rules behind it."},
+{"head":"WHAT TO CHECK","icon":"checklist","items":["Who holds reserves","Are reports published","How it is regulated"],"narration":"Beginners often ask who holds the reserves, whether reports are published, and how the coin is regulated."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
