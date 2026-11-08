@@ -1,0 +1,10 @@
+{"title":"Why Do Crypto Transactions Cost Fees? Gas Fees Explained (Beginner Guide)","caption":"Educational only. Not financial advice. Why sending crypto costs a fee, and why the fee changes. Plain English for beginners. AI-generated voice.","hashtags":"#crypto #cryptobasics #gasfees #blockchain #ethereum","publish":true,
+"scenes":[
+{"head":"WHY THE FEE?","icon":"question","narration":"You send crypto and get charged a fee. Why does that happen, and why does the fee keep changing?"},
+{"head":"WHO GETS PAID","icon":"checklist","items":["Computers run the network","They check each transfer","The fee pays them"],"narration":"Thousands of computers run a blockchain and check every transfer. The fee pays them for that work."},
+{"head":"WHY IT CHANGES","icon":"gauge","value":70,"sub":"BUSY NETWORK, HIGHER FEE","narration":"Space in each block is limited. When many people send at once, they compete, and fees rise. When it is quiet, fees fall."},
+{"head":"GAS FEES","icon":"checklist","items":["Gas is the fee's name","Paid in the network coin","Not the same everywhere"],"narration":"On Ethereum the fee is called gas. You pay it in that network's own coin, and every network works differently."},
+{"head":"FEES ARE NOT THE PRICE","icon":"question","narration":"Fees are separate from the price of what you send. A tiny transfer can still cost a fee, so small amounts can feel expensive."},
+{"head":"BEFORE YOU SEND","icon":"checklist","items":["Check the fee first","Check the network","Test a small amount"],"narration":"Before you send, check the fee and the network. Sending a small test amount first is a common beginner habit."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
