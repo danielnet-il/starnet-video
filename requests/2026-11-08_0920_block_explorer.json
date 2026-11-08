@@ -1,0 +1,10 @@
+{"title":"What Is a Block Explorer? Check Any Crypto Transaction Yourself (Beginner Guide)","caption":"Educational only. Not financial advice. How a block explorer lets you look up public crypto transactions. Plain English for beginners. AI-generated voice.","hashtags":"#crypto #cryptobasics #blockchain #cryptoeducation #cryptonews","publish":true,
+"scenes":[
+{"head":"SENT CRYPTO. DID IT ARRIVE?","icon":"question","narration":"You sent crypto and nothing shows up yet. How can you check what really happened?"},
+{"head":"BLOCK EXPLORER","icon":"checklist","items":["A public search site","Shows blockchain records","Free to look up"],"narration":"A block explorer is a public website that lets anyone search the records of a blockchain, and it is free to use."},
+{"head":"WHAT YOU CAN LOOK UP","icon":"checklist","items":["Transaction I D","Wallet address","Block and time"],"narration":"You can search a transaction I D, or a wallet address, and see the block and the time it was recorded."},
+{"head":"READ THE STATUS","icon":"checklist","items":["Pending: waiting","Confirmed: recorded","Failed: not completed"],"narration":"Pending means it is still waiting. Confirmed means it is recorded on the chain. Failed means it did not complete."},
+{"head":"WHAT IT SHOWS","icon":"checklist","items":["Amount sent","Network fee paid","Sender and receiver"],"narration":"It shows the amount, the network fee that was paid, and the addresses involved, not the names of real people."},
+{"head":"STAY CAREFUL","icon":"checklist","items":["Use trusted sites only","Never enter seed words","Check the web address"],"narration":"Use trusted explorers, check the web address, and never type your seed phrase into any site. A real explorer never asks."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
