@@ -1,0 +1,10 @@
+{"title":"What Is the Bitcoin Halving? Why Only 21 Million Will Ever Exist (Beginner Guide)","caption":"Educational only. Not financial advice. How the Bitcoin halving works, in plain English. Sources: CoinGecko, Blockstream, The Block. AI-generated voice.","hashtags":"#crypto #bitcoin #cryptobasics #bitcoinhalving #cryptoeducation","publish":true,
+"scenes":[
+{"head":"BITCOIN HAS A SCHEDULE","icon":"question","narration":"Did you know new bitcoin is created on a fixed schedule, and that schedule gets cut in half again and again?"},
+{"head":"NEW COINS FOR MINERS","icon":"checklist","items":["Miners add new blocks","They earn new bitcoin","This is the block reward"],"narration":"Miners add new blocks to the chain. As a reward, they receive newly created bitcoin."},
+{"head":"THE HALVING","icon":"checklist","items":["About every four years","Every two hundred ten thousand blocks","Reward is cut in half"],"narration":"About every four years, after two hundred ten thousand blocks, that reward is cut in half. This is called the halving."},
+{"head":"THE LATEST NUMBERS","icon":"chartdown","dir":"up","big":"3.125 BTC","sub":"BLOCK REWARD SINCE APRIL 2024","narration":"It started at fifty bitcoin per block. After the April twenty twenty four halving, it is three point one two five."},
+{"head":"A HARD CAP","icon":"checklist","items":["Max supply: 21 million","Set in the code","Last coins around 2140"],"narration":"Because rewards keep shrinking, the total supply is capped at twenty one million coins. The last ones are expected around the year twenty one forty."},
+{"head":"NOT A PRICE PROMISE","icon":"checklist","items":["Slower new supply","Price can still fall","Nobody can predict it"],"narration":"A halving slows new supply, but it does not guarantee anything about price. Nobody can predict that."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 8. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November eighth. Not financial advice."}
+]}
