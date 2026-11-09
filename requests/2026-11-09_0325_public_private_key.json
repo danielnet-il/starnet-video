@@ -1,0 +1,15 @@
+{
+"title": "Public Key vs Private Key: Your Crypto Mailbox Explained (Beginner Guide)",
+"caption": "Educational only. Not financial advice. A public key is like a mailbox anyone can send to. A private key is the key that opens it. Sources: Trezor, CoinDesk, Bitpanda, MoonPay. AI-generated voice.",
+"hashtags": "#crypto #cryptobasics #privatekey #wallet #cryptoeducation",
+"publish": true,
+"scenes": [
+{"head":"TWO KEYS, ONE WALLET","icon":"question","narration":"Every crypto wallet runs on two keys. One you can share, and one you must never share. Do you know which is which?"},
+{"head":"THE MAILBOX","icon":"checklist","items":["Public key: your address","Anyone can send to it","Safe to share"],"narration":"Your public key, or address, works like a mailbox. Anyone can drop crypto in, and sharing it is normal."},
+{"head":"THE KEY TO OPEN IT","icon":"checklist","items":["Private key: proves ownership","Approves every spend","Keep it secret"],"narration":"Your private key is the key to that mailbox. It proves you own the funds and approves every payment you send."},
+{"head":"WHO HAS THE KEY?","icon":"checklist","items":["Whoever holds it, controls it","No help desk to reset it","Lost key, lost access"],"narration":"Whoever holds the private key controls the funds. There is usually no help desk to reset it, so a lost key can mean lost access."},
+{"head":"HOW IT GETS STOLEN","icon":"checklist","items":["Fake support messages","Phishing sites","Photos and cloud notes"],"narration":"Scammers ask for keys through fake support messages and phishing sites. Never type them into a website or store them online."},
+{"head":"SAFE HABITS","icon":"checklist","items":["Never share your keys","Write backups offline","Double-check addresses"],"narration":"Keep backups offline, never share your keys with anyone, and always double-check an address before you send."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 9. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November ninth. Not financial advice."}
+]
+}
