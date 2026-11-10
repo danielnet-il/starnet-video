@@ -50,7 +50,7 @@ def main(src, dst):
         if edge:
             mp3 = os.path.join(tmp, f'l{i}.mp3')
             for attempt in range(4):
-                r = subprocess.run([edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--rate=' + os.environ.get('EDGE_RATE', '+30%'), '--file', txt, '--write-media', mp3], capture_output=True, text=True)
+                r = subprocess.run([edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--rate=' + os.environ.get('EDGE_RATE', '+0%'), '--file', txt, '--write-media', mp3], capture_output=True, text=True)
                 if r.returncode == 0 and os.path.exists(mp3) and os.path.getsize(mp3) > 1000: done = True; break
                 print('edge-tts failed (attempt %d): %s' % (attempt + 1, (r.stderr or r.stdout)[-300:]), flush=True)
                 import time; time.sleep(4 * (attempt + 1))
