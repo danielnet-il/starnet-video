@@ -2,6 +2,11 @@ name: render-on-push
 on:
   push:
     paths: ['requests/**']
+  workflow_dispatch:
+    inputs:
+      file:
+        description: Existing request file to re-render
+        required: true
 concurrency:
   group: render-push
   cancel-in-progress: false
@@ -25,7 +30,8 @@ jobs:
       - name: Find new request
         id: req
         run: |
-          F=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- 'requests/*.json' | head -1)
+          F="${{ github.event.inputs.file }}"
+          if [ -z "$F" ]; then F=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- 'requests/*.json' | head -1); fi
           echo "file=$F" >> "$GITHUB_OUTPUT"
           echo "Request: $F"
       - name: Validate and build

@@ -46,11 +46,18 @@ def main(src, dst):
     for i, s in enumerate(scenes):
         txt = os.path.join(tmp, f'l{i}.txt'); wav = os.path.join(tmp, f'l{i}.wav')
         open(txt, 'w').write(speakable(s['narration']))
+        done = False
         if edge:
             mp3 = os.path.join(tmp, f'l{i}.mp3')
-            sh(edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--rate=' + os.environ.get('EDGE_RATE', '+30%'), '--file', txt, '--write-media', mp3, stderr=subprocess.DEVNULL)
-            sh('ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', '44100', '-ac', '1', wav)
-        else: sh(piper, '--model', voice, '--sentence_silence', '0.25', '--output_file', wav, stdin=open(txt), stderr=subprocess.DEVNULL)
+            for attempt in range(4):
+                r = subprocess.run([edge, '--voice', os.environ.get('EDGE_VOICE', 'en-US-AndrewNeural'), '--rate=' + os.environ.get('EDGE_RATE', '+30%'), '--file', txt, '--write-media', mp3], capture_output=True, text=True)
+                if r.returncode == 0 and os.path.exists(mp3) and os.path.getsize(mp3) > 1000: done = True; break
+                print('edge-tts failed (attempt %d): %s' % (attempt + 1, (r.stderr or r.stdout)[-300:]), flush=True)
+                import time; time.sleep(4 * (attempt + 1))
+            if done: sh('ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', '44100', '-ac', '1', wav)
+        if not done:
+            if piper is None: piper, voice = ensure_tools(); print('FALLBACK to Piper voice', flush=True)
+            sh(piper, '--model', voice, '--sentence_silence', '0.25', '--output_file', wav, stdin=open(txt), stderr=subprocess.DEVNULL)
         s['_voice'] = duration(wav)
     # 2) timings from the audio
     t = 0.0
