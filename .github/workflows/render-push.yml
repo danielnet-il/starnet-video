@@ -26,7 +26,7 @@ jobs:
       - name: System packages
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter fonts-dejavu-core
       - name: Python deps
-        run: pip install playwright edge-tts && python -m playwright install --with-deps chromium
+        run: pip install -U playwright edge-tts && python -m playwright install --with-deps chromium
       - name: Find new request
         id: req
         run: |
