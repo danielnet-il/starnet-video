@@ -44,3 +44,10 @@ You are a fresh session. Work alone, do not ask questions. Report the result in 
    - Check Team 7: `executions_list` scenarioId 7997171, newest entry should become `SUCCESS` (7 operations) within about a minute. If it ERRORs, do not retry the publish; report it.
    - ALWAYS (even on failure): `scenarios_deactivate` then `scenarios_delete` the relay.
 7. Final message (Hebrew): the title, the topic, Team 7 result, the raw URL. If the org is paused (`organizations_get` 9290516 isPaused true) say so and stop; do not spend.
+
+## Performance tracking and style pivot (authorised by Daniel, 2026-11-18: "if after a while it does not work, create a new style you think will succeed, whatever it is, and upload")
+
+1. First run of each day (Asia/Jerusalem): read Make datastore 230376 record `stats_prev` (format `subscribers|totalViews|telegramMembers`), `videoCount` is not stored, so count files in `videos/`. Append one line to `STATS.csv` (`date,subscribers,views,videos_in_repo`) if today's date is not there yet; commit with the request push.
+2. Review every 7 days (Sundays) using STATS.csv: views gained per video and subscriber growth over the last 14 days. If, over 14+ days of autopilot at >=4 videos/day, subscribers gained < 5 AND views gained per video < 5, the current style is failing: PIVOT.
+3. PIVOT = invent a new style yourself, without asking (no spending, LEGAL.md still applies): a fresh format such as a hook-first 20-30 s "myth vs fact" or "1 number that shocks" series with a bolder opening line in the first second, shorter narration, different topic mix (trending questions beginners search for), new title pattern (question/number/warning). Add any new scene icons to engine.html if needed. Record the new style and the date in `STYLE.md` (what changed and why), then continue with it for the next 14 days before judging again. Never delete past videos or touch other channels/scenarios.
+4. Mention any pivot in the 3-line Hebrew report.
