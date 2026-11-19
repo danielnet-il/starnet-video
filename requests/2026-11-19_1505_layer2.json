@@ -1,0 +1,15 @@
+{
+"title": "What Is a Layer 2? How Crypto Gets Cheaper and Faster (Beginner Guide)",
+"caption": "Educational only. Not financial advice. A Layer 2 handles transactions off the main chain, then posts a summary back to it. Sources: CoinDesk, The Block. AI-generated voice. Educational only. Not financial advice.",
+"hashtags": "#crypto #cryptobasics #layer2 #ethereum #cryptoeducation",
+"publish": true,
+"scenes": [
+{"head":"WHY IS ETHEREUM SO BUSY?","icon":"question","narration":"Why can using a blockchain get slow and costly when many people use it at once? Layer twos try to fix that."},
+{"head":"THE MAIN CHAIN","icon":"checklist","items":["Layer 1: the base chain","Limited space per block","Busy time, higher fees"],"narration":"A base chain, called layer one, has limited space. When lots of people want in, fees can rise."},
+{"head":"WHAT IS A LAYER 2?","icon":"checklist","items":["Built on top of layer 1","Handles work off the main chain","Relies on it for security"],"narration":"A layer two is a separate network built on top of the main chain. It does the busy work, and leans on the main chain for security."},
+{"head":"HOW ROLLUPS WORK","icon":"checklist","items":["Bundle many transactions","Compress into one batch","Post it to the main chain"],"narration":"A popular type, called a rollup, bundles hundreds of transactions together and posts one compressed batch back to the main chain."},
+{"head":"THE BENEFIT","icon":"checklist","items":["Lower fees","Faster activity","Same base chain underneath"],"narration":"Sharing the cost across many users can mean lower fees and faster activity, according to CoinDesk and The Block."},
+{"head":"THE TRADE-OFFS","icon":"checklist","items":["Still early technology","Bridges add risk","More steps for users"],"narration":"There are trade-offs. The technology is still young, and bridges that move funds between networks add risk."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 19. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November nineteenth. Not financial advice."}
+]
+}
