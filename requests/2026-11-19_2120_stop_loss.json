@@ -1,0 +1,15 @@
+{
+"title":"What Is a Stop-Loss? The Safety Net Beginners Should Know",
+"caption":"Educational only. Not financial advice. A stop-loss is an order that closes a position at a set price to limit a loss. Sources: Investopedia, Fidelity. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #stoploss #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"PRICE DROPS FAST. NOW WHAT?","icon":"chartdown","big":"-10%","sub":"A SUDDEN DROP IN MINUTES","narration":"Crypto prices can fall fast. Many traders use a tool to limit the damage. It is called a stop-loss."},
+{"head":"WHAT IS A STOP-LOSS?","icon":"checklist","items":["An order you set ahead","Triggers at a price you pick","Aims to limit a loss"],"narration":"A stop-loss is an order you set in advance. When the price reaches your chosen level, it sells automatically to limit a loss."},
+{"head":"A SIMPLE EXAMPLE","icon":"question","narration":"Say a coin costs one hundred dollars and your stop is ninety. If the price falls to ninety, the order is triggered."},
+{"head":"WHY PEOPLE USE IT","icon":"checklist","items":["Removes emotion","Sets a limit up front","No constant screen watching"],"narration":"Traders use it to take emotion out of decisions, set a limit up front, and avoid watching the screen all day."},
+{"head":"IT IS NOT PERFECT","icon":"gauge","value":60,"sub":"FAST MARKETS CAN SLIP PAST IT","narration":"It is not a guarantee. In a fast market the price can jump past your level, so you may sell lower than planned."},
+{"head":"BEFORE YOU USE ONE","icon":"checklist","items":["Learn how your platform works","Know the fees","Never risk money you need"],"narration":"Learn how your platform handles stop orders, know the fees, and never risk money you cannot afford to lose."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 19. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November nineteenth. Not financial advice."}
+]
+}
