@@ -1,0 +1,15 @@
+{
+"title": "What Is a Stablecoin? Crypto That Tries Not to Move (Beginner Guide)",
+"caption": "Educational only. Not financial advice. A stablecoin aims to hold a steady value, often tied to a currency like the U S dollar. Sources: Fidelity, The Block. AI-generated voice. Educational only. Not financial advice.",
+"hashtags": "#crypto #cryptobasics #stablecoin #cryptoeducation",
+"publish": true,
+"scenes": [
+{"head":"CRYPTO THAT STAYS CALM?","icon":"question","narration":"Crypto prices can swing a lot. So what is a coin that is built to stay steady? It is called a stablecoin."},
+{"head":"WHAT IS A STABLECOIN?","icon":"checklist","items":["A crypto token","Aims for a steady price","Often tied to the dollar"],"narration":"A stablecoin is a crypto token that aims to keep a steady value, often by tracking a currency such as the U S dollar."},
+{"head":"HOW IT STAYS STEADY","icon":"checklist","items":["Backed by cash or bonds","Backed by other crypto","Or run by code rules"],"narration":"Some are backed by reserves like cash, some by other crypto, and some rely on algorithms to hold the price."},
+{"head":"WHY PEOPLE USE THEM","icon":"checklist","items":["Move money fast","Park value between trades","Send across borders"],"narration":"People use them to move value quickly, to sit between trades, and to send money across borders, according to Fidelity."},
+{"head":"WHAT IS A DEPEG?","icon":"gauge","value":40,"sub":"PRICE SLIPS FROM ITS TARGET","narration":"When a stablecoin slips away from its target price, it is called a depeg. It can happen if people doubt the reserves."},
+{"head":"RISKS TO KNOW","icon":"checklist","items":["Reserves may not be clear","Rules differ by country","Stable is not risk free"],"narration":"Stable does not mean risk free. Check what backs a coin, who audits it, and what the rules are where you live."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 19. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November nineteenth. Not financial advice."}
+]
+}
