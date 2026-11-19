@@ -10,7 +10,6 @@ You are a fresh session. Work alone, do not ask questions. Report the result in 
 - If there is no solid new story, make an evergreen beginner video (e.g. "3 signs of a crypto scam", "what is a stop-loss", "how to read the fear & greed index") using the `checklist`, `gauge`, `question` icons.
 - Never touch any Make scenario other than the temporary relay you create. Never touch Team 7 (7997171). Never publish twice for the same video. Never put secrets anywhere.
 - Never spend money. Everything here is free.
-- Time guard: if the current date (Asia/Jerusalem) is after 2026-11-09 03:30, do nothing and say so.
 
 - Obey LEGAL.md (disclaimer on every video, AI label, no licensed music/brands).
 
