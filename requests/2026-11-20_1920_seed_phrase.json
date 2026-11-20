@@ -1,0 +1,15 @@
+{
+"title":"What Is a Seed Phrase? The Secret Words That Control Your Crypto",
+"caption":"Educational only. Not financial advice. A seed phrase is a list of words that can restore a crypto wallet, so keep it private and offline. Sources: Ethereum.org, Investopedia. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #seedphrase #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"12 WORDS, ONE KEY","icon":"question","narration":"A short list of random words can control a whole crypto wallet. What exactly is a seed phrase?"},
+{"head":"WHAT IT IS","icon":"checklist","items":["12 or 24 words","Backs up your wallet","Restores access"],"narration":"A seed phrase is usually twelve or twenty four words. It lets you restore your wallet on a new device if your old one is lost."},
+{"head":"WHY IT MATTERS","icon":"gauge","value":100,"sub":"ANYONE WITH IT HAS FULL ACCESS","narration":"Anyone who has your seed phrase can take control of your wallet. There is usually no reset button and no support desk to undo it."},
+{"head":"COMMON MISTAKES","icon":"checklist","items":["Photo or screenshot","Saved in cloud notes","Sent in a message"],"narration":"Common mistakes include taking a photo, saving it in cloud notes, or sending it in a chat. Those copies can be stolen."},
+{"head":"SAFER HABITS","icon":"checklist","items":["Write it on paper","Store it offline","Never share it"],"narration":"Many guides suggest writing it on paper, storing it offline in a safe place, and never typing it into a website."},
+{"head":"RED FLAG","icon":"checklist","items":["Support asks for it","Pop-up asks for it","Real apps never do"],"narration":"If anyone asks for your seed phrase, even someone claiming to be support, treat it as a scam warning sign."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
