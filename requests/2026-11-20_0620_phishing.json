@@ -1,0 +1,15 @@
+{
+"title":"Crypto Phishing: 3 Fake Message Tricks Every Beginner Should Spot",
+"caption":"Educational only. Not financial advice. Phishing uses fake messages and links to trick people into giving up access. Sources: FTC, Investopedia. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #phishing #cryptosafety",
+"publish":true,
+"scenes":[
+{"head":"A MESSAGE ARRIVES","icon":"question","narration":"A message says your crypto account has a problem. Click this link now. Is it real, or is it a trap?"},
+{"head":"THIS IS PHISHING","icon":"checklist","items":["Fake emails","Fake websites","Fake support chats"],"narration":"It is called phishing. Scammers pretend to be a trusted company, using fake emails, fake websites, and fake support chats."},
+{"head":"TRICK ONE: URGENCY","icon":"gauge","value":90,"sub":"ACT NOW PRESSURE","narration":"Trick one is urgency. Messages say act now or lose your account. Pressure is meant to stop you from thinking."},
+{"head":"TRICK TWO: LOOKALIKES","icon":"checklist","items":["Odd spelling in links","Strange extra words","Unknown sender"],"narration":"Trick two is lookalike links. A web address may have a small spelling change that is easy to miss."},
+{"head":"TRICK THREE: SECRETS","icon":"question","narration":"Trick three is asking for secrets. Real services never need your seed phrase or password sent in a message."},
+{"head":"STAY SAFE","icon":"checklist","items":["Type the address yourself","Never share your seed phrase","Turn on 2FA"],"narration":"Type the website address yourself, never share your seed phrase, and turn on two factor login."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
