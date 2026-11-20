@@ -1,0 +1,15 @@
+{
+"title":"Crypto Account Safety: Why 2FA Matters More Than a Strong Password",
+"caption":"Educational only. Not financial advice. Two-factor authentication adds a second lock to your accounts, and authenticator apps are generally safer than text messages. Sources: CISA, Coinbase Learn. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptosecurity #2fa #cryptobasics #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"ONE PASSWORD IS NOT ENOUGH","icon":"question","narration":"Your crypto account has a strong password. But what if that password leaks? One lock is not enough."},
+{"head":"WHAT IS 2FA?","icon":"checklist","items":["Something you know","Something you have","Both needed to log in"],"narration":"Two factor authentication, or two F A, asks for a second proof. Something you know, plus something you have."},
+{"head":"WHY IT MATTERS","icon":"gauge","value":90,"sub":"ACCOUNT RISK WITH PASSWORD ONLY","narration":"Passwords can be stolen by fake sites or leaked in data breaches. A second step can stop a thief who has your password."},
+{"head":"TEXT MESSAGE 2FA","icon":"liquidation","big":"SIM SWAP","sub":"PHONE NUMBERS CAN BE TAKEN OVER","narration":"Codes sent by text can be risky. Criminals sometimes trick phone companies into moving your number to their phone."},
+{"head":"A SAFER CHOICE","icon":"checklist","items":["Authenticator app","Hardware security key","Avoid text codes"],"narration":"Security agencies suggest authenticator apps or hardware keys, which are generally safer than text message codes."},
+{"head":"GOOD HABITS","icon":"checklist","items":["Unique password each site","Save backup codes offline","Never share a code"],"narration":"Use a unique password for each site, keep backup codes offline, and never share a code with anyone, even support."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
