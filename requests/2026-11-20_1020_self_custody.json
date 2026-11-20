@@ -1,0 +1,15 @@
+{
+"title":"Who Really Holds Your Crypto? Exchange vs Your Own Wallet",
+"caption":"Educational only. Not financial advice. Crypto on an exchange is held by the exchange; in a self-custody wallet you hold the keys. Each has trade-offs. Sources: Investopedia, Coinbase Learn. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #selfcustody #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"WHO HOLDS IT?","icon":"question","narration":"You bought crypto. But who actually holds it? The answer depends on where you keep it."},
+{"head":"ON AN EXCHANGE","icon":"checklist","items":["Exchange holds the keys","Easy to use","Needs company trust"],"narration":"On an exchange, the company holds the keys for you. It is easy to use, but you trust the company."},
+{"head":"SELF-CUSTODY","icon":"checklist","items":["You hold the keys","Full control","Your responsibility"],"narration":"In self-custody, you hold the keys yourself. You get full control, and full responsibility too."},
+{"head":"THE CATCH","icon":"chartdown","big":"NO RESET","sub":"LOST KEYS CAN MEAN LOST COINS","narration":"The catch is that nobody can reset a lost recovery phrase. If it is gone, the coins can be gone."},
+{"head":"THE OTHER RISK","icon":"gauge","value":50,"sub":"CONVENIENCE VS CONTROL","narration":"Exchanges carry their own risk, like hacks or frozen withdrawals. It is a trade-off between convenience and control."},
+{"head":"BASIC HABITS","icon":"checklist","items":["Use two-factor login","Never share your phrase","Test with small amounts"],"narration":"Either way, use two-factor login, never share your recovery phrase, and test with small amounts first."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
