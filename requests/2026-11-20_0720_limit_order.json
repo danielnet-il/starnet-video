@@ -1,0 +1,15 @@
+{
+"title":"Market Order vs Limit Order: The Choice That Changes Your Price",
+"caption":"Educational only. Not financial advice. A market order fills fast at the current price; a limit order waits for the price you set. Sources: Investopedia, SEC Investor.gov. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #trading101 #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"TWO BUTTONS","icon":"question","narration":"Every exchange gives you two ways to place an order. Do you know how they differ?"},
+{"head":"MARKET ORDER","icon":"checklist","items":["Fills right away","Takes the current price","Price can slip"],"narration":"A market order fills right away at the best price available. It is fast, but the final price can differ."},
+{"head":"WHAT IS SLIPPAGE","icon":"chartdown","big":"PRICE GAP","sub":"BETWEEN CLICK AND FILL","narration":"That gap is called slippage. When prices move fast or trading is thin, it can be bigger than expected."},
+{"head":"LIMIT ORDER","icon":"checklist","items":["You set the price","Waits for a match","May never fill"],"narration":"A limit order lets you name your price. It only fills if the market reaches it, so it might never fill."},
+{"head":"THE TRADE-OFF","icon":"gauge","value":50,"sub":"SPEED VS PRICE CONTROL","narration":"The trade-off is simple. Market orders favor speed. Limit orders favor price control."},
+{"head":"BEFORE YOU CLICK","icon":"checklist","items":["Check the order type","Read the price shown","Start with small amounts"],"narration":"Before you click, check the order type, read the price shown, and practice with small amounts."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
