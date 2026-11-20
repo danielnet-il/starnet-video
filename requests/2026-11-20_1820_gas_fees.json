@@ -1,0 +1,15 @@
+{
+"title":"What Are Gas Fees? Why Sending Crypto Can Cost Extra",
+"caption":"Educational only. Not financial advice. Gas fees are network charges paid to process a crypto transaction. They change with demand. Sources: Ethereum.org, Investopedia. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #gasfees #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"WHY THE EXTRA FEE?","icon":"question","narration":"You send crypto and get charged an extra fee. What is it, and why does it keep changing?"},
+{"head":"WHAT IS GAS?","icon":"checklist","items":["Network fee","Paid per transaction","Not paid to the app"],"narration":"Gas is a fee paid to the network for processing your transaction. It usually goes to the computers that keep the network running."},
+{"head":"WHY IT CHANGES","icon":"chartdown","dir":"up","big":"BUSY","sub":"MORE DEMAND MEANS HIGHER FEES","narration":"When many people use a network at once, fees can rise. When it is quiet, fees are often lower."},
+{"head":"COMPLEX ACTIONS","icon":"gauge","value":70,"sub":"MORE STEPS CAN COST MORE","narration":"Bigger actions, like using smart contracts, usually need more computing work than a simple transfer, so they can cost more."},
+{"head":"SMART HABITS","icon":"checklist","items":["Check fee first","Avoid rushing","Compare networks"],"narration":"Check the fee before you confirm, avoid rushing during busy times, and know that different networks charge differently."},
+{"head":"REMEMBER","icon":"checklist","items":["Fees are not refundable","Double check address","Education only"],"narration":"Fees are usually not refundable, even if a transfer fails, so double check everything. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 20. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twentieth. Not financial advice."}
+]
+}
