@@ -1,0 +1,15 @@
+{
+"title":"Pump and Dump: How Hype Can Trap Beginners in Small Coins",
+"caption":"Educational only. Not financial advice. A pump and dump is when hype pushes a small asset up so insiders can sell to latecomers. Sources: SEC Investor.gov, Investopedia. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #pumpanddump #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"WHY DID IT SPIKE?","icon":"question","narration":"A tiny coin jumps fifty percent in an hour, and everyone is posting about it. Is it real, or a pump and dump?"},
+{"head":"THE PUMP","icon":"chartdown","dir":"up","big":"SUDDEN SPIKE","sub":"HYPE PUSHES A SMALL COIN UP","narration":"In a pump, a group hypes a small, thinly traded coin online. New buyers rush in, and the price jumps fast."},
+{"head":"THE DUMP","icon":"chartdown","big":"PRICE CRASHES","sub":"INSIDERS SELL TO LATECOMERS","narration":"In the dump, the people who bought early sell into that demand. The hype stops, and late buyers are left holding the loss."},
+{"head":"WHY SMALL COINS?","icon":"checklist","items":["Low trading volume","Easy to move price","Little real news"],"narration":"Small coins have low trading volume, so a little money can move the price a lot. That makes them a common target."},
+{"head":"WARNING SIGNS","icon":"checklist","items":["Guaranteed returns","Act now pressure","Secret insider tip"],"narration":"Regulators warn about guaranteed returns, pressure to act right now, and secret tips from strangers in online groups."},
+{"head":"SMARTER HABITS","icon":"checklist","items":["Check real news","Check trading volume","Ignore the hype"],"narration":"Before reacting to hype, check for real news, look at trading volume, and remember that a fast spike can reverse just as fast."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
