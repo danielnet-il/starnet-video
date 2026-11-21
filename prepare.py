@@ -3,7 +3,7 @@ import json, os, re, sys
 
 ICONS = {"question", "exchange", "key", "risk", "wallet", "scales", "compare", "outro",
          "hack", "record", "laptop", "paused", "frozen", "safe", "scam", "lesson",
-         "chartdown", "link", "liquidation", "outflow", "gauge", "checklist", "compound", "inflation", "brain"}
+         "chartdown", "link", "liquidation", "outflow", "gauge", "checklist", "compound", "inflation", "brain", "hook"}
 
 def clean(s, n):
     s = re.sub(r'[\x00-\x1f]', ' ', str(s)).strip()
@@ -21,7 +21,9 @@ def main():
     out = []
     for s in scenes:
         if s.get('icon') not in ICONS: sys.exit(f"unknown icon: {s.get('icon')}")
-        o = {'head': clean(s['head'], 40).upper(), 'icon': s['icon'], 'narration': clean(s['narration'], 260)}
+        o = {'head': clean(s.get('head', ''), 40).upper(), 'icon': s['icon'], 'narration': clean(s['narration'], 260)}
+        if s.get('hook'): o['hook'] = clean(s['hook'], 60)
+        if s.get('color') in ('yellow', 'red', 'green', 'cyan'): o['color'] = s['color']
         if s.get('sym') in ('$', '₿'): o['sym'] = s['sym']
         if s.get('foot'): o['foot'] = clean(s['foot'], 90)
         if s.get('big'): o['big'] = clean(s['big'], 14)

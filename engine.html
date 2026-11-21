@@ -38,13 +38,13 @@ function S(fn, len, p = 1, a = 1, w = 2.5) {
   ctx.restore();
 }
 function T(str, x, y, size, o = {}) {
-  const { weight = 700, a = 1, font = 'Inter, sans-serif', align = 'center', spacing = 0 } = o;
+  const { weight = 700, a = 1, font = 'Inter, sans-serif', align = 'center', spacing = 0, color = '255,255,255' } = o;
   ctx.save();
   ctx.font = `${weight} ${size}px ${font}`;
   ctx.textAlign = align; ctx.textBaseline = 'middle';
   if ('letterSpacing' in ctx) ctx.letterSpacing = spacing + 'px';
-  ctx.fillStyle = `rgba(255,255,255,${a * GA})`;
-  ctx.shadowColor = `rgba(255,255,255,${0.35 * a * GA})`; ctx.shadowBlur = 8;
+  ctx.fillStyle = `rgba(${color},${a * GA})`;
+  ctx.shadowColor = `rgba(${color},${0.35 * a * GA})`; ctx.shadowBlur = 8;
   ctx.fillText(str, x, y);
   ctx.restore();
 }
@@ -449,9 +449,41 @@ function pulseRings(lt, a) {
   });
 }
 
+const ACCENT = { yellow: '255,214,10', red: '255,69,58', green: '48,209,88', cyan: '100,210,255' };
+function wrapWords(str, max) {
+  const out = []; let cur = '';
+  str.split(' ').forEach(w => { if ((cur + ' ' + w).trim().length > max) { out.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); });
+  if (cur) out.push(cur); return out;
+}
+const SCx = {
+  // Hook-first scene: giant kinetic text, accent colour, readable from the very first frame.
+  hook(lt, d, s) {
+    const col = ACCENT[s.color] || ACCENT.yellow;
+    const lines = wrapWords(s.hook.toUpperCase(), 13).slice(0, 4);
+    ctx.save(); ctx.font = '900 100px Inter, sans-serif'; const widest = Math.max(...lines.map(l => ctx.measureText(l).width)); ctx.restore();
+    const size = Math.min(lines.length > 3 ? 64 : 76, Math.floor(480 / widest * 100)), lh = size * 1.12, y0 = 430 - (lines.length - 1) * lh / 2;
+    let idx = 0;
+    lines.forEach((l, li) => {
+      const words = l.split(' '); const widths = words.map(w => { ctx.save(); ctx.font = `900 ${size}px Inter, sans-serif`; const m = ctx.measureText(w + ' ').width; ctx.restore(); return m; });
+      const total = widths.reduce((a, b) => a + b, 0); let x = W / 2 - total / 2;
+      words.forEach((w, wi) => {
+        const k = eo(prog(lt, idx * (s.first ? 0 : .22), .28)); idx++;
+        const accent = li === lines.length - 1;
+        ctx.save(); ctx.translate(x + widths[wi] / 2, y0 + li * lh); ctx.scale(1 + .35 * (1 - k), 1 + .35 * (1 - k));
+        T(w, 0, 0, size, { weight: 900, a: k, color: accent ? col : '255,255,255' }); ctx.restore();
+        x += widths[wi];
+      });
+    });
+    const by = y0 + lines.length * lh + 10, bk = eo(prog(lt, .5, .5));
+    ctx.save(); ctx.fillStyle = `rgba(${col},${GA})`; ctx.fillRect(W / 2 - 90 * bk, by, 180 * bk, 5); ctx.restore();
+    if (s.sub) T(s.sub.toUpperCase(), W / 2, by + 50, 19, { weight: 700, spacing: 3, a: .85 * prog(lt, 1, .5) });
+  },
+};
+Object.assign(SC, SCx);
 const TD = 1.0; // transition length in seconds (scenes overlap, nothing ever goes to black)
 function drawScene(s, t, i, n) {
-  const lt = t - s.start + TD / 2, d = s.end - s.start + TD; // animation starts as soon as the scene begins blending in
+  s.first = i === 0;
+  const lt = t - s.start + TD / 2 + (i === 0 ? 1.0 : 0), d = s.end - s.start + TD; // animation starts as soon as the scene begins blending in
   const inn = i === 0 ? 1 : eio(prog(t, s.start - TD / 2, TD));
   const out = i === n - 1 ? 1 : 1 - eio(prog(t, s.end - TD / 2, TD));
   const a = inn * out; if (a <= .001) return;
@@ -464,9 +496,9 @@ function drawScene(s, t, i, n) {
   ctx.filter = blur > .4 ? `blur(${blur.toFixed(1)}px)` : 'none';
   ctx.translate(W / 2 + dx, 480); ctx.scale(sc * cz, sc * cz); ctx.translate(-W / 2 + camx, -480 + camy);
   GA = a;
-  head(s, lt, d);
+  if (s.icon !== 'hook') head(s, lt, d);
   ctx.save(); ctx.translate(0, 6 * Math.sin(lt * 1.5 + i));   // idle bob: icons never sit still
-  pulseRings(lt, a);
+  if (s.icon !== 'hook') pulseRings(lt, a);
   SC[s.icon](lt, d, s);
   ctx.restore();
   // captions removed (Daniel, 2026-11-07)
