@@ -1,0 +1,15 @@
+{
+"title":"What Is Liquidity? Why Some Coins Are Hard to Sell",
+"caption":"Educational only. Not financial advice. Liquidity describes how easily an asset can be bought or sold without moving its price much. Sources: Investopedia, Coinbase Learn. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #liquidity #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"CAN YOU SELL IT?","icon":"question","narration":"Owning a coin is one thing. Being able to sell it at a fair price is another. That is liquidity."},
+{"head":"WHAT IS LIQUIDITY?","icon":"checklist","items":["Easy to buy","Easy to sell","Small price impact"],"narration":"Liquidity means how easily something can be bought or sold without moving its price much. Busy markets usually have more of it."},
+{"head":"HIGH LIQUIDITY","icon":"gauge","value":85,"sub":"MANY BUYERS AND SELLERS","narration":"When many people trade a coin, there are always orders waiting on both sides. Prices tend to move more smoothly."},
+{"head":"LOW LIQUIDITY","icon":"chartdown","big":"BIG GAPS","sub":"FEW TRADERS, JUMPY PRICES","narration":"With few traders, even one large order can push the price a lot. You may get a worse price than you expected."},
+{"head":"WHAT TO CHECK","icon":"checklist","items":["Trading volume","Gap between prices","Where it trades"],"narration":"Beginners can look at trading volume, the gap between buy and sell prices, and how many places list the coin."},
+{"head":"REMEMBER","icon":"checklist","items":["Liquidity can change","Hype is not volume","Education only"],"narration":"Liquidity can dry up fast in stressful times, and hype is not the same as real trading. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
