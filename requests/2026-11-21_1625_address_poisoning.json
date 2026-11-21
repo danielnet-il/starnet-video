@@ -1,0 +1,16 @@
+{
+"title":"Address Poisoning: The Copy-Paste Trick That Can Empty a Crypto Wallet",
+"caption":"Educational only. Not financial advice. Address poisoning is when scammers send tiny transfers from a look-alike wallet address, hoping you copy it later by mistake. Sources: MetaMask Support, Trust Wallet, Elliptic, Bitdefender. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #cryptoscams #cryptosafety #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COPY-PASTE TRAP","icon":"question","narration":"Would you notice if one crypto address was almost the same as yours? Scammers count on you not noticing."},
+{"head":"WHAT IT IS","icon":"checklist","items":["Scammer makes a look-alike address","Sends you a tiny transfer","It sits in your history"],"narration":"Address poisoning is when a scammer makes a look-alike address and sends you a tiny transfer so it shows in your history."},
+{"head":"THE TRICK","icon":"question","narration":"The fake address often matches the first and last few characters of one you really use, so it looks familiar."},
+{"head":"THE MISTAKE","icon":"chartdown","big":"WRONG WALLET","sub":"CRYPTO SENT CANNOT BE UNDONE","narration":"Later, you copy an address from your history, send money, and it lands with the scammer. Transfers cannot be reversed."},
+{"head":"HOW TO STAY SAFE","icon":"checklist","items":["Check every character","Never copy from history","Send a small test first"],"narration":"Check every character, not just the start and end. Avoid copying from your history, and consider a small test transfer first."},
+{"head":"MORE HABITS","icon":"checklist","items":["Save trusted addresses","Ignore random tiny deposits","Never click unknown tokens"],"narration":"Save trusted addresses in your wallet, ignore random tiny deposits, and never interact with tokens you did not ask for."},
+{"head":"EDUCATION, NOT ADVICE","icon":"gauge","value":25,"sub":"SLOW DOWN, CHECK TWICE","narration":"A few extra seconds of checking can protect your funds. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
