@@ -1,0 +1,15 @@
+{
+"title":"Free Crypto Airdrops: What They Are and How Scammers Fake Them",
+"caption":"Educational only. Not financial advice. An airdrop is a project giving free tokens to users, but scammers copy the idea to steal wallets. Sources: Investopedia, Coinbase Learn. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #airdrop #cryptoscams #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"FREE CRYPTO?","icon":"question","narration":"Free crypto sounds great. Projects really do give away tokens, and this is called an airdrop. But scammers love the idea too."},
+{"head":"WHAT IS AN AIRDROP?","icon":"checklist","items":["Free tokens sent","Often to early users","Used to gain attention"],"narration":"In a real airdrop, a project sends free tokens to wallets, often to early users, to build attention and a community."},
+{"head":"THE FAKE VERSION","icon":"liquidation","big":"FAKE LINKS","sub":"SCAMMERS COPY REAL AIRDROPS","narration":"Scammers send fake links and messages pretending to be an airdrop, hoping you will connect your wallet or share secrets."},
+{"head":"3 RED FLAGS","icon":"checklist","items":["Asks for seed phrase","Pushes you to hurry","Unknown surprise tokens"],"narration":"Red flags include asking for your seed phrase, pressure to hurry, and surprise tokens from a sender you do not know."},
+{"head":"HOW SAFE USERS ACT","icon":"checklist","items":["Use official sites only","Never share seed phrase","Skip unknown links"],"narration":"Safer habits are using only official websites, never sharing your seed phrase, and ignoring links from strangers."},
+{"head":"EDUCATION, NOT ADVICE","icon":"gauge","value":20,"sub":"IF IT SOUNDS TOO EASY, PAUSE","narration":"If something sounds too easy, pause and check it. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
