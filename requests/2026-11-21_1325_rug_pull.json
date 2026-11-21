@@ -1,0 +1,16 @@
+{
+"title":"What Is a Rug Pull? 3 Warning Signs Every Crypto Beginner Should Know",
+"caption":"Educational only. Not financial advice. A rug pull is when a project's creators hype a token, then drain the money and disappear. Sources: KuCoin Learn, Trust Wallet, Built In. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #rugpull #cryptoscams #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"THE RUG PULL","icon":"question","narration":"Ever heard the term rug pull? It is one of the most common ways beginners lose money in crypto."},
+{"head":"WHAT IT MEANS","icon":"checklist","items":["Creators hype a new token","Money flows in","Creators vanish with it"],"narration":"Creators hype a new token, people buy it, and then the creators take the money and disappear."},
+{"head":"THE CRASH","icon":"chartdown","big":"NEAR ZERO","sub":"PRICE CAN COLLAPSE FAST","narration":"When the creators exit, the price can collapse close to zero within minutes, leaving buyers stuck."},
+{"head":"3 WARNING SIGNS","icon":"checklist","items":["Anonymous team","Hype but no product","Locked or hidden liquidity"],"narration":"Warning signs include an anonymous team, lots of hype with no real product, and liquidity that is not locked."},
+{"head":"MORE RED FLAGS","icon":"checklist","items":["Pressure to buy now","Promises of huge gains","No clear audit"],"narration":"Pressure to buy now, promises of huge gains, and no independent audit are also red flags."},
+{"head":"SAFER HABITS","icon":"checklist","items":["Research the team","Read independent reviews","Never risk what you need"],"narration":"Safer habits are researching the team, reading independent reviews, and never risking money you need."},
+{"head":"EDUCATION, NOT ADVICE","icon":"gauge","value":20,"sub":"HYPE IS NOT PROOF","narration":"Hype is not proof. Take your time and check the facts. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
