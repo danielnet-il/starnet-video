@@ -1,0 +1,15 @@
+{
+"title":"What Is Crypto Staking? How Locking Coins Can Earn Rewards (And the Risks)",
+"caption":"Educational only. Not financial advice. Staking means locking coins to help a proof of stake network run, and rewards are not guaranteed. Sources: Investopedia, Coinbase Learn. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #staking #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"LOCK COINS, GET PAID?","icon":"question","narration":"Some crypto lets you lock your coins to help run a network, and receive rewards. This is called staking."},
+{"head":"WHAT IS STAKING?","icon":"checklist","items":["Lock your coins","Help secure the network","Rewards may follow"],"narration":"On proof of stake blockchains, people lock coins to help check transactions. In return, the network may pay rewards."},
+{"head":"WHERE REWARDS COME FROM","icon":"gauge","value":50,"sub":"NEW COINS AND NETWORK FEES","narration":"Rewards usually come from newly created coins and transaction fees. The rate can change over time."},
+{"head":"THE RISKS","icon":"checklist","items":["Price can fall","Coins may be locked","Penalties exist"],"narration":"But the coin price can still fall, coins may be locked for a while, and some networks penalize bad behavior."},
+{"head":"THE PLATFORM RISK","icon":"outflow","big":"NOT YOUR KEYS","sub":"A PLATFORM CAN FAIL OR FREEZE","narration":"If you stake through a company, you rely on it. If the platform fails or freezes withdrawals, your coins can be stuck."},
+{"head":"BEFORE YOU LEARN MORE","icon":"checklist","items":["Rewards not guaranteed","Read lock-up rules","Know the risks"],"narration":"Rewards are never guaranteed, so read the lock up rules and understand the risks first. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
