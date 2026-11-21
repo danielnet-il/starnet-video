@@ -1,0 +1,16 @@
+{
+"title":"Token Approvals: The Hidden Wallet Permission Beginners Forget to Check",
+"caption":"Educational only. Not financial advice. A token approval lets a smart contract move your tokens, and old unlimited approvals can stay active until you revoke them. Sources: Trust Wallet, Coinbase, Etherscan. AI-generated voice. Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #cryptosafety #wallet #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"HIDDEN PERMISSION","icon":"question","narration":"Did you know your crypto wallet may still be giving old apps permission to move your tokens?"},
+{"head":"WHAT IT IS","icon":"checklist","items":["You approve a smart contract","It can move that token","Often set once"],"narration":"A token approval lets a smart contract move a specific token from your wallet, and you usually grant it only once."},
+{"head":"THE CATCH","icon":"question","narration":"Many apps ask for unlimited access by default, and the approval stays active even after you disconnect."},
+{"head":"THE RISK","icon":"chartdown","big":"OLD PERMISSION","sub":"CAN BE ABUSED LATER","narration":"If that contract is hacked, or you approved a fake site, scammers may use the permission to drain tokens."},
+{"head":"CHECK YOUR LIST","icon":"checklist","items":["Review approvals regularly","Revoke ones you do not use","Set limits, not unlimited"],"narration":"Review your approvals regularly, revoke the ones you no longer use, and prefer a set limit over unlimited access."},
+{"head":"HOW TO REVIEW","icon":"checklist","items":["Use a trusted checker","Connect your own wallet","Expect a small gas fee"],"narration":"Trusted checker tools, like Etherscan's approval checker, let you review and revoke. Revoking usually costs a small gas fee."},
+{"head":"EDUCATION, NOT ADVICE","icon":"gauge","value":30,"sub":"REVIEW PERMISSIONS OFTEN","narration":"Never sign something you do not understand. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 21. Not financial advice.","narration":"Follow for one crypto basic a day. Reports as of November twenty first. Not financial advice."}
+]
+}
