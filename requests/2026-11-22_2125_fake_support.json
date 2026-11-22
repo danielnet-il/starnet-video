@@ -1,0 +1,13 @@
+{
+"title":"Real Crypto Support Will Never DM You First",
+"caption":"Educational only. Not financial advice. Scammers pose as exchange or wallet support and ask for your seed phrase or a remote screen share. Sources: Coinbase and Kraken help centers. AI-generated voice. Has anyone ever messaged you pretending to be support? Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptoscams #cryptosecurity #cryptobasics #bitcoin",
+"publish":true,
+"scenes":[
+{"head":"SCAM WARNING","icon":"hook","hook":"SUPPORT WILL NEVER DM YOU FIRST","color":"red","narration":"Real crypto support will never message you first."},
+{"head":"THE TRICK","icon":"hook","hook":"FAKE AGENTS COPY REAL SUPPORT PAGES","color":"yellow","narration":"Scammers pose as exchange or wallet support. They copy names and logos, then say your account has a problem."},
+{"head":"THE ASK","icon":"hook","hook":"SEED PHRASE OR SCREEN SHARE? IT IS A SCAM","color":"red","narration":"They ask for your seed phrase, a code, or to share your screen. Exchanges say they never ask for these."},
+{"head":"THE FIX","icon":"hook","hook":"CLOSE THE CHAT. OPEN THE OFFICIAL APP","color":"green","narration":"Stop replying. Open the official app yourself and use the help section there."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
