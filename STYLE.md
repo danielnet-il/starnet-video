@@ -10,3 +10,10 @@ Rules for every video from now on:
 5. Titles/captions: curiosity or danger + beginner promise, first 40 chars carry the hook. Ask one question at the end of the caption to invite comments.
 6. Frequency: max 3 videos/day, spaced; vary topic type (scam warning / myth vs fact / "what happens if" / 1 number that shocks). Never two similar topics in a row.
 7. Review again on 2026-12-05 using STATS.csv and the daily report; if views per video are still < 50 on TikTok, change the topic mix, not just the visuals.
+
+## Content mix v2.1 (Daniel, 2026-11-22: "more crypto news: how each coin works, what it is for, why it dropped now")
+Per day (3 videos): 
+1. NEWS (one per day, the first run of the morning): what happened in crypto today and why, e.g. "WHY IS <COIN> DROPPING TODAY". Needs >=2 independent publishers from the last 24 h (search the web first). Explain the cause in plain words; never predict prices, never say buy/sell/hold, say "reports say" for unconfirmed causes. Put the date in the caption. If no real news is confirmed, do a COIN video instead.
+2. COIN EXPLAINER (rotating series, one coin each, never repeat a coin within 14 days): Bitcoin, Ethereum, Solana, XRP, BNB, Cardano, Dogecoin, Avalanche, Chainlink, Polkadot, Toncoin, Tron, Litecoin, Polygon... Cover: what it is, what problem it solves/what it is used for, how it works in one idea (who validates, how fast, fees), one real limitation. Use sources (project docs/foundation pages + 1 independent). Title pattern "WHAT IS <COIN> (IN 30 SECONDS)".
+3. SAFETY/EVERGREEN or MYTH-vs-FACT (as before).
+Always keep LEGAL.md: educational only, no investment advice, no price targets.

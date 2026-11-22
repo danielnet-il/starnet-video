@@ -13,7 +13,7 @@ You are a fresh session. Work alone, do not ask questions. Report the result in 
 
 - Obey LEGAL.md (disclaimer on every video, AI label, no licensed music/brands).
 
-- STYLE: follow STYLE.md (hook-first v2) for every video. Max 3 videos/day.
+- STYLE: follow STYLE.md (hook-first v2 + content mix v2.1: news / coin explainer / safety) for every video. Max 3 videos/day. Check the already-published titles in requests/ so you do not repeat a coin or topic.
 
 ## Steps
 1. `add_repo` danielnet-il/starnet-video with push access, clone it to /home/claude/starnet-video (follow the tool's instructions; one clone only), `git pull`.
