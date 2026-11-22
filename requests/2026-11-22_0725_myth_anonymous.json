@@ -1,0 +1,13 @@
+{
+"title":"Is Bitcoin Really Anonymous? The Myth That Surprises Beginners",
+"caption":"Educational only. Not financial advice. Bitcoin is usually pseudonymous, not anonymous: the ledger is public and addresses can sometimes be linked to people. Sources: Nasdaq, River. AI-generated voice. Which crypto myth should we bust next? Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptobasics #bitcoin #privacy #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"MYTH","icon":"hook","hook":"BITCOIN IS NOT ANONYMOUS","color":"yellow","narration":"Bitcoin is not anonymous. Here is the myth most beginners believe."},
+{"head":"THE FACT","icon":"hook","hook":"EVERY TRANSACTION IS PUBLIC FOREVER","color":"cyan","narration":"Every Bitcoin transaction is recorded on a public ledger that anyone can read, and it never gets erased."},
+{"head":"THE CATCH","icon":"hook","hook":"ADDRESSES CAN BE LINKED TO YOU","color":"red","narration":"Your address is a code, not a name. But when you use an exchange or share it, it can be linked to you."},
+{"head":"WHAT TO DO","icon":"hook","hook":"TREAT IT AS PUBLIC, NOT SECRET","color":"green","narration":"Think pseudonymous, not invisible. Be careful what you share about your wallet."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
