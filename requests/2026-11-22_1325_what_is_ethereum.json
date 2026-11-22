@@ -1,0 +1,14 @@
+{
+"title":"What Is Ethereum? Not Just Another Coin (30 Seconds)",
+"caption":"Educational only. Not financial advice. Ethereum is a public network where programs called smart contracts run, and ether (ETH) pays the fees. Sources: ethereum.org, Decrypt. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #ethereum #cryptobasics #cryptoeducation #smartcontracts",
+"publish":true,
+"scenes":[
+{"head":"WHAT IS ETHEREUM","icon":"hook","hook":"ETHEREUM IS MORE THAN A COIN","color":"yellow","narration":"Ethereum is more than a coin. Here is what it really is, in thirty seconds."},
+{"head":"THE IDEA","icon":"hook","hook":"A PUBLIC COMPUTER ANYONE CAN USE","color":"cyan","narration":"Ethereum is a shared network. Developers put programs on it, called smart contracts, and they run exactly as written."},
+{"head":"HOW IT WORKS","icon":"hook","hook":"VALIDATORS LOCK UP ETH TO SECURE IT","color":"cyan","narration":"Instead of mining, validators lock up ether as a deposit to check transactions. Ether also pays the fees."},
+{"head":"THE LIMIT","icon":"hook","hook":"BUSY NETWORK MEANS HIGHER FEES","color":"red","narration":"When many people use it at once, fees can rise. That is one real limitation beginners should know."},
+{"head":"WHAT TO DO","icon":"hook","hook":"LEARN HOW IT WORKS BEFORE ANYTHING ELSE","color":"green","narration":"Understand what a coin does before you ever touch it. Knowledge first."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
