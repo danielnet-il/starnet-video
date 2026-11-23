@@ -1,0 +1,13 @@
+{
+"title":"'The Blockchain Can't Be Hacked' - Myth or Fact?",
+"caption":"Educational only. Not financial advice. The chain itself is very hard to rewrite, but most losses come from stolen keys, fake sites and weak apps. Sources: bitcoin.org and ethereum.org security guides. AI-generated voice. Have you ever double checked a link before connecting your wallet? Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptosecurity #cryptobasics #blockchain #bitcoin",
+"publish":true,
+"scenes":[
+{"head":"MYTH OR FACT","icon":"hook","hook":"THE BLOCKCHAIN CAN'T BE HACKED?","color":"yellow","narration":"The blockchain can't be hacked. Myth or fact?"},
+{"head":"THE FACT","icon":"hook","hook":"REWRITING THE CHAIN IS VERY HARD","color":"cyan","narration":"Changing old blocks on a big network like Bitcoin would take enormous computing power. That part is real."},
+{"head":"THE MYTH","icon":"hook","hook":"YOU AND YOUR APPS CAN STILL BE HACKED","color":"red","narration":"Losses usually come from stolen keys, fake websites, phishing links and buggy apps built on top of the chain."},
+{"head":"THE FIX","icon":"hook","hook":"PROTECT YOUR KEYS. CHECK EVERY LINK","color":"green","narration":"Never share your seed phrase, turn on two factor login, and type official addresses yourself."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
