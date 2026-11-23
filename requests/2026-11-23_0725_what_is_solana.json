@@ -1,0 +1,13 @@
+{
+"title":"What Is Solana? Why It Is Fast and Cheap (30 Seconds)",
+"caption":"Educational only. Not financial advice. Solana is a blockchain built for speed and low fees, using a clock-like trick called Proof of History. It has also had outages. Sources: Cointelegraph and The Block explainers. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #solana #cryptobasics #blockchain #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHY IS SOLANA SO FAST AND CHEAP?","color":"yellow","narration":"Why is Solana so fast and cheap?"},
+{"head":"WHAT IT IS","icon":"hook","hook":"A BLOCKCHAIN BUILT FOR SPEED","color":"cyan","narration":"Solana is a blockchain for apps, payments and tokens. Its coin, S O L, pays fees and rewards the computers that run it."},
+{"head":"THE IDEA","icon":"hook","hook":"PROOF OF HISTORY: A BUILT-IN CLOCK","color":"cyan","narration":"Its big idea is Proof of History. It stamps events in order, like a shared clock, so computers agree faster."},
+{"head":"THE LIMIT","icon":"hook","hook":"FAST CHAINS HAVE TRADE-OFFS","color":"red","narration":"The trade-off is that Solana has had network outages in the past. Speed alone does not mean reliability."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
