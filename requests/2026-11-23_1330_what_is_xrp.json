@@ -1,0 +1,13 @@
+{
+"title":"What Is XRP? The Coin Built for Fast Payments (30 Seconds)",
+"caption":"Educational only. Not financial advice. XRP runs on the XRP Ledger, a network built for fast, cheap payments that confirms transactions without mining. Its supply was created at the start, and a company holds a large share. Sources: Gemini Cryptopedia and Binance Academy explainers. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #xrp #cryptobasics #blockchain #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHAT IS XRP, AND WHY DOES IT EXIST?","color":"yellow","narration":"What is X R P, and why does it exist?"},
+{"head":"WHAT IT IS","icon":"hook","hook":"A COIN BUILT FOR FAST PAYMENTS","color":"cyan","narration":"X R P runs on the X R P Ledger, a network made for moving money quickly and cheaply, even across borders."},
+{"head":"THE IDEA","icon":"hook","hook":"NO MINING: VALIDATORS AGREE","color":"cyan","narration":"There is no mining. A group of validator computers vote on each batch of transactions, which usually confirms in seconds."},
+{"head":"THE LIMIT","icon":"hook","hook":"MOST COINS EXISTED FROM DAY ONE","color":"red","narration":"The catch is that the supply was created at the start, and a company holds a big share. Some people see that as a concern."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
