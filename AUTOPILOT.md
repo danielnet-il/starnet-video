@@ -52,3 +52,8 @@ You are a fresh session. Work alone, do not ask questions. Report the result in 
 2. Review every 7 days (Sundays) using STATS.csv: views gained per video and subscriber growth over the last 14 days. If, over 14+ days of autopilot at >=4 videos/day, subscribers gained < 5 AND views gained per video < 5, the current style is failing: PIVOT.
 3. PIVOT = invent a new style yourself, without asking (no spending, LEGAL.md still applies): a fresh format such as a hook-first 20-30 s "myth vs fact" or "1 number that shocks" series with a bolder opening line in the first second, shorter narration, different topic mix (trending questions beginners search for), new title pattern (question/number/warning). Add any new scene icons to engine.html if needed. Record the new style and the date in `STYLE.md` (what changed and why), then continue with it for the next 14 days before judging again. Never delete past videos or touch other channels/scenarios.
 4. Mention any pivot in the 3-line Hebrew report.
+
+## Standing mandate to adapt (Daniel, 2026-11-23: "if something is not working, change it")
+- If something does not work (a run fails, a render breaks, a format gets no views), diagnose it and FIX it in this repo (engine, prepare.py, build.py, workflows, these rules) and keep going, then mention the change in the report and in STYLE.md.
+- You may change on your own: topics, scene style/visuals, hooks, titles/captions, video length, posting frequency (never above 3/day), icons, rules in this file.
+- You may NOT change without Daniel: anything that costs money, credentials/tokens/keys, creating accounts, legal items in LEGAL.md (only make them stricter), other Make scenarios or Team 7 itself.
