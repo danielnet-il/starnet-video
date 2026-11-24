@@ -1,0 +1,13 @@
+{
+"title":"What Is Cardano? The Coin Built on Research (30 Seconds)",
+"caption":"Educational only. Not financial advice. Cardano is a blockchain whose coin is called A D A. It uses proof of stake, so holders can delegate coins to help secure the network without locking them away. Sources: cardano.org and Coinmama and Finst beginner explainers. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #cardano #ada #cryptobasics #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHAT IS CARDANO, AND WHAT IS A D A?","color":"yellow","narration":"What is Cardano, and what is A D A?"},
+{"head":"WHAT IT IS","icon":"hook","hook":"A BLOCKCHAIN BUILT STEP BY STEP","color":"cyan","narration":"Cardano is a blockchain with its own coin, A D A. Its designers say new features are researched and reviewed before release."},
+{"head":"THE IDEA","icon":"hook","hook":"NO MINING: COIN HOLDERS HELP SECURE IT","color":"cyan","narration":"There is no mining. Cardano uses proof of stake, and holders can delegate their coins to a pool without locking them away."},
+{"head":"THE LIMIT","icon":"hook","hook":"CAREFUL BUILDING CAN MEAN SLOWER GROWTH","color":"red","narration":"The catch is that its app ecosystem is smaller than some rivals, and a slower pace means less activity. Delegating also carries risks."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
