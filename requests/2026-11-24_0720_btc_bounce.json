@@ -1,0 +1,14 @@
+{
+"title":"Why Bitcoin Jumped 5% Yesterday (And Why It May Not Last)",
+"caption":"Nov 24: Bitcoin bounced about five percent on Nov 23 after a weekend sell-off. Reports from CryptoTicker and KuCoin News point to short sellers closing positions and a US stock rally, not a big wave of new buyers. Educational only. Not financial advice. AI-generated voice. What do you think moves the price more, news or traders closing bets? Educational only. Not financial advice.",
+"hashtags":"#crypto #bitcoin #cryptonews #cryptobasics",
+"publish":true,
+"scenes":[
+{"head":"CRYPTO NEWS","icon":"hook","hook":"BITCOIN JUMPED 5% IN ONE DAY. WHY?","color":"yellow","narration":"Bitcoin jumped about five percent in one day. Why?"},
+{"head":"THE MOVE","icon":"chartdown","dir":"up","big":"+5%","sub":"BITCOIN BOUNCE ON NOV 23","narration":"After a weekend sell off, Bitcoin bounced to around sixty four thousand dollars on November twenty third, reports say."},
+{"head":"THE CAUSE","icon":"hook","hook":"MOSTLY TRADERS CLOSING BETS, REPORTS SAY","color":"cyan","narration":"Reports say short sellers closed their bets, and a rally in US tech stocks helped. Not a big wave of new buyers."},
+{"head":"THE CATCH","icon":"hook","hook":"ETF MONEY HAS BEEN LEAVING FOR WEEKS","color":"red","narration":"Reports also show money flowing out of Bitcoin E T Fs for several weeks in a row. So one bounce is not a trend."},
+{"head":"THE LESSON","icon":"hook","hook":"ONE BIG DAY IS NOT A TREND","color":"green","narration":"Learn what moves a price, and never rely on a single day's headline."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Reports as of Nov 24. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
