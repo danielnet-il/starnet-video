@@ -1,0 +1,14 @@
+{
+"title":"'You Need a Whole Bitcoin to Own Bitcoin' - Myth or Fact?",
+"caption":"Educational only. Not financial advice. Bitcoin can be split into 100 million units called satoshis, so owning a whole coin is not required. Sources: bitcoin.org developer documentation and Investopedia. AI-generated voice. Did you think you needed a full coin? Educational only. Not financial advice.",
+"hashtags":"#crypto #bitcoin #cryptobasics #mythvsfact #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"MYTH OR FACT","icon":"hook","hook":"YOU NEED A WHOLE BITCOIN TO OWN ANY?","color":"yellow","narration":"You need a whole Bitcoin to own any. Myth or fact?"},
+{"head":"THE FACT","icon":"hook","hook":"ONE BITCOIN SPLITS INTO 100 MILLION PARTS","color":"cyan","narration":"The smallest unit is called a satoshi. One Bitcoin equals one hundred million satoshis, so you can hold a tiny fraction."},
+{"head":"THE CONFUSION","icon":"hook","hook":"A COIN'S PRICE IS NOT YOUR MINIMUM","color":"yellow","narration":"A high price per coin does not block small amounts. Many exchanges let you choose an amount in your own currency."},
+{"head":"THE CATCH","icon":"hook","hook":"SMALL AMOUNTS STILL CARRY BIG RISK","color":"red","narration":"A fraction can still lose value, and fees can take a bigger share of small amounts. Always check the fees first."},
+{"head":"THE FIX","icon":"hook","hook":"LEARN FIRST, THEN DECIDE","color":"green","narration":"Understand how it works and what you could lose before you do anything. This is education, not advice."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
