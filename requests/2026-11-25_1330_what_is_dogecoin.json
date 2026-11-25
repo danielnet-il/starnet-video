@@ -1,0 +1,13 @@
+{
+"title":"What Is Dogecoin? The Joke Coin With No Supply Cap (30 Seconds)",
+"caption":"Educational only. Not financial advice. Dogecoin started in December 2013 as a joke, built from Litecoin's code. It uses proof of work, makes a block about every minute, and has no maximum supply. Sources: Kraken Learn and Revolut beginner guides. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #dogecoin #doge #cryptobasics #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHAT IS DOGECOIN? IT STARTED AS A JOKE","color":"yellow","narration":"What is Dogecoin? It started as a joke."},
+{"head":"WHAT IT IS","icon":"hook","hook":"MADE IN 2013 FROM LITECOIN'S CODE","color":"cyan","narration":"Two engineers launched Dogecoin in December twenty thirteen, adapting Litecoin's code. It was meant for fun and tipping."},
+{"head":"THE IDEA","icon":"hook","hook":"MINERS ADD A NEW BLOCK EVERY MINUTE","color":"cyan","narration":"It uses proof of work. Miners confirm payments, and a new block arrives about every minute, much faster than Bitcoin."},
+{"head":"THE LIMIT","icon":"hook","hook":"NO CAP: NEW COINS KEEP BEING CREATED","color":"red","narration":"There is no maximum supply, so new coins keep appearing. Its price also swings with social media hype."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
