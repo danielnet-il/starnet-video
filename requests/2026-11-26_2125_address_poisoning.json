@@ -1,0 +1,13 @@
+{
+"title":"This Fake Transaction Can Trick You Into Sending Crypto to a Scammer",
+"caption":"Educational only. Not financial advice. Address poisoning: scammers send a tiny transfer from a look-alike wallet address so it shows up in your history, hoping you copy it by mistake. Sources: MetaMask support, Ledger Academy, Trezor support. AI-generated voice. Did you know about this trick? Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptoscam #cryptosecurity #cryptobasics #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"SCAM WARNING","icon":"hook","hook":"A FAKE TRANSACTION CAN EMPTY YOUR WALLET","color":"red","narration":"A fake transaction can trick you into sending crypto to a scammer."},
+{"head":"THE TRICK","icon":"hook","hook":"SCAMMERS COPY THE START AND END OF AN ADDRESS","color":"yellow","narration":"Scammers create a wallet address that looks almost the same as one you used, matching the first and last characters. Then they send you a tiny transfer."},
+{"head":"THE TRAP","icon":"hook","hook":"THEIR ADDRESS NOW SITS IN YOUR HISTORY","color":"red","narration":"The look-alike address now appears in your history. If you copy it from there by mistake, your money goes to them."},
+{"head":"THE FIX","icon":"hook","hook":"CHECK EVERY CHARACTER BEFORE YOU SEND","color":"green","narration":"Never copy an address from your history. Use a saved address book, and compare the full address before you confirm."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
