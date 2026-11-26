@@ -1,0 +1,14 @@
+{
+"title":"What Is BNB? The Exchange Coin That Became Its Own Blockchain (30 Seconds)",
+"caption":"Educational only. Not financial advice. BNB started in 2017 as Binance's exchange token and now powers BNB Chain, where it pays network fees. A portion of the supply is burned on a schedule, and critics say a small validator set makes the chain less decentralized. Sources: BNB Chain documentation, Cointelegraph, Bybit Learn. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #bnb #bnbchain #cryptobasics #cryptoeducation",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHAT IS BNB? FROM EXCHANGE COIN TO BLOCKCHAIN","color":"yellow","narration":"What is B N B? An exchange coin that became a blockchain."},
+{"head":"WHAT IT IS","icon":"hook","hook":"LAUNCHED IN 2017 AS AN EXCHANGE TOKEN","color":"cyan","narration":"B N B launched in twenty seventeen as Binance's own token. Today it powers B N B Chain, a network for apps and payments."},
+{"head":"WHAT IT DOES","icon":"hook","hook":"IT PAYS THE FEES ON THE NETWORK","color":"cyan","narration":"Users spend B N B to pay fees on B N B Chain. Validators confirm blocks quickly, so fees are usually low."},
+{"head":"THE BURN","icon":"hook","hook":"PART OF THE SUPPLY IS BURNED ON A SCHEDULE","color":"green","narration":"The project burns some coins on a schedule, which slowly reduces the total supply."},
+{"head":"THE LIMIT","icon":"hook","hook":"CRITICS SAY: TOO FEW VALIDATORS","color":"red","narration":"Critics say a small validator set makes the chain less decentralized, and it is closely tied to one company."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
