@@ -1,0 +1,14 @@
+{
+"title":"Your Phone Number Can Be Stolen: Why SMS Codes Are Risky for Crypto",
+"caption":"Educational only. Not financial advice. In a SIM swap, a scammer tricks a phone carrier into moving your number to their SIM, then receives your text-message codes. Security firms and exchanges such as CertiK, OKX and Coinbase say app-based or hardware-key 2FA is safer than SMS. AI-generated voice. Which 2FA do you use today? Educational only. Not financial advice.",
+"hashtags":"#crypto #cryptosecurity #2fa #simswap #cryptobasics #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"SECURITY WARNING","icon":"hook","hook":"YOUR PHONE NUMBER CAN BE STOLEN","color":"red","narration":"Your phone number can be stolen. Here is why that matters."},
+{"head":"THE TRICK","icon":"hook","hook":"SCAMMERS MOVE YOUR NUMBER TO THEIR SIM","color":"yellow","narration":"In a SIM swap, a scammer tricks your carrier into moving your number to their SIM. Then your text codes go to them."},
+{"head":"THE RISK","icon":"hook","hook":"TEXT CODES CAN LOG THEM IN AS YOU","color":"red","narration":"With your number, they can request reset codes for accounts that use text message login, including crypto accounts."},
+{"head":"THE FIX","icon":"hook","hook":"USE AN AUTHENTICATOR APP OR KEY","color":"green","narration":"Security experts say an authenticator app or a hardware key is safer than text messages. Many exchanges support both."},
+{"head":"TODAY","icon":"hook","hook":"CHECK YOUR 2FA SETTINGS TODAY","color":"green","narration":"Open your account security settings today and switch off text message codes if you can."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
