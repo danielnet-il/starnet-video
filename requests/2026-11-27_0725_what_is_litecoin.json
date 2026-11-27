@@ -1,0 +1,14 @@
+{
+"title":"What Is Litecoin? The Coin Built to Be Bitcoin's Faster Cousin (30 Seconds)",
+"caption":"Educational only. Not financial advice. Litecoin was created by Charlie Lee in 2011 as a lighter alternative to Bitcoin. It targets a new block every two and a half minutes and caps supply at 84 million coins. Critics note it has a much smaller app ecosystem than Ethereum. Sources: Wikipedia, Banxa Learn. AI-generated voice. Which coin should we explain next? Educational only. Not financial advice.",
+"hashtags":"#crypto #litecoin #cryptobasics #cryptoeducation #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"COIN EXPLAINER","icon":"hook","hook":"WHAT IS LITECOIN? BITCOIN'S FASTER COUSIN","color":"yellow","narration":"What is Litecoin? Bitcoin's faster cousin."},
+{"head":"WHAT IT IS","icon":"hook","hook":"CREATED IN 2011 BY CHARLIE LEE","color":"cyan","narration":"Charlie Lee, a former Google engineer, released Litecoin in twenty eleven. It copies Bitcoin's design with a few tweaks."},
+{"head":"HOW IT WORKS","icon":"hook","hook":"A NEW BLOCK EVERY 2.5 MINUTES","color":"cyan","narration":"Litecoin targets a new block every two and a half minutes, so payments confirm faster than on Bitcoin."},
+{"head":"THE SUPPLY","icon":"hook","hook":"ONLY 84 MILLION COINS WILL EXIST","color":"green","narration":"Supply is capped at eighty four million coins, and the mining reward is cut in half on a schedule."},
+{"head":"THE LIMIT","icon":"hook","hook":"CRITICS: FEW APPS BUILT ON IT","color":"red","narration":"Critics say Litecoin has a much smaller app ecosystem than Ethereum, so it is mainly used for payments."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
