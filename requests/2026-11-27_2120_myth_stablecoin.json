@@ -1,0 +1,13 @@
+{
+"title":"'Stablecoins Are Always Worth One Dollar' - Myth or Fact?",
+"caption":"Educational only. Not financial advice. Stablecoins aim to track the dollar, but in March 2023 USDC briefly fell to about ninety cents (The Block, Axios), and in May 2022 TerraUSD dropped to roughly forty cents and kept falling (Fortune, The Block). AI-generated voice. Did you think stablecoins could not move? Educational only. Not financial advice.",
+"hashtags":"#crypto #stablecoin #cryptoeducation #mythorfact #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"MYTH OR FACT","icon":"hook","hook":"STABLECOINS ARE ALWAYS WORTH ONE DOLLAR?","color":"yellow","narration":"Stablecoins are always worth one dollar? Myth or fact?"},
+{"head":"MYTH","icon":"hook","hook":"STABLE IS A GOAL, NOT A PROMISE","color":"red","narration":"It is a myth. A stablecoin only aims to match the dollar. Nothing guarantees it will hold that price."},
+{"head":"PROOF","icon":"chartdown","big":"ABOUT 90 CENTS","sub":"USDC IN MARCH 2023","narration":"In March twenty twenty three, U S D C briefly fell to about ninety cents after a bank it used failed. Terra U S D fell much further in twenty twenty two.","dir":"down"},
+{"head":"THE FIX","icon":"hook","hook":"ASK WHAT BACKS IT BEFORE YOU TRUST IT","color":"green","narration":"Before trusting any stablecoin, ask what backs it, and who checks. Calm does not mean risk free."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
