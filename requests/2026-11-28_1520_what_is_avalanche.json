@@ -1,0 +1,13 @@
+{
+"title":"What Is Avalanche? The Coin That Lets Anyone Launch a Blockchain (30 Seconds)",
+"caption":"Educational only. Not financial advice. Avalanche, launched in 2020 by Ava Labs, is a smart contract network where developers can launch their own custom chains, and its AVAX token pays fees and secures the network through staking (Galaxy Research, KuCoin Learn). AI-generated voice. Would you want a blockchain of your own? Educational only. Not financial advice.",
+"hashtags":"#crypto #avalanche #avax #cryptoeducation #learncrypto",
+"publish":true,
+"scenes":[
+{"head":"WHAT IS AVALANCHE","icon":"hook","hook":"WHAT IF ANYONE COULD LAUNCH THEIR OWN BLOCKCHAIN?","color":"yellow","narration":"What if anyone could launch their own blockchain? That is the idea behind Avalanche."},
+{"head":"THE IDEA","icon":"hook","hook":"MANY CUSTOM CHAINS, ONE NETWORK","color":"cyan","narration":"Avalanche, launched in twenty twenty by Ava Labs, lets developers build custom chains with their own rules. Its main chain works with Ethereum apps."},
+{"head":"THE TOKEN","icon":"hook","hook":"A V A X PAYS FEES AND SECURES THE NETWORK","color":"green","narration":"The A V A X token pays network fees. People can also stake it, which helps secure the network. Reports say transactions finalize in about two seconds."},
+{"head":"THE LIMIT","icon":"hook","hook":"IT COMPETES WITH ETHEREUM'S OWN ADD-ONS","color":"red","narration":"The catch: Avalanche competes with Ethereum layer twos and other networks, so it has to keep winning developers."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
