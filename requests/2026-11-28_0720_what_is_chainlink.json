@@ -1,0 +1,13 @@
+{
+"title":"What Is Chainlink? How Smart Contracts See the Real World",
+"caption":"Educational only. Not financial advice. A smart contract cannot look up a price by itself. Chainlink is a network of independent computers, called oracles, that bring outside data onto a blockchain, and its LINK token is used to pay them (The Block, Decrypt, Kraken). AI-generated voice. Would you trust one data source? Educational only. Not financial advice.",
+"hashtags":"#crypto #chainlink #cryptoeducation #learncrypto #defi",
+"publish":true,
+"scenes":[
+{"head":"WHAT IS CHAINLINK","icon":"hook","hook":"SMART CONTRACTS ARE BLIND TO THE REAL WORLD","color":"yellow","narration":"Smart contracts are blind to the real world. So how do they get a price?"},
+{"head":"THE PROBLEM","icon":"hook","hook":"A BLOCKCHAIN CANNOT LOOK UP DATA ALONE","color":"cyan","narration":"A blockchain cannot check a price or the weather on its own. It needs a messenger, called an oracle."},
+{"head":"THE IDEA","icon":"hook","hook":"CHAINLINK USES MANY ORACLES, NOT ONE","color":"green","narration":"Chainlink is a network of independent computers that report the same data. The result is checked together. The L I N K token pays them."},
+{"head":"THE LIMIT","icon":"hook","hook":"BAD DATA IN MEANS BAD RESULTS OUT","color":"red","narration":"The catch: if the data is wrong, the contract still acts on it. An oracle is one more thing to trust."},
+{"head":"ONE CRYPTO BASIC A DAY","icon":"outro","foot":"Educational only. Not financial advice.","narration":"Follow for one crypto basic a day. Educational only. Not financial advice."}
+]
+}
